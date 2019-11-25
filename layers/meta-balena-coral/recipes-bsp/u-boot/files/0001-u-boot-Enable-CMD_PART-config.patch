@@ -3,6 +3,7 @@ From: Sebastian Panceac <sebastian@balena.io>
 Date: Thu, 4 Jul 2019 10:52:50 +0200
 Subject: [PATCH] u-boot: Enable CMD_PART config
 
+Upstream-status: Inappropriate[configuration]
 Signed-off-by: Sebastian Panceac <sebastian@balena.io>
 ---
  configs/mx8mq_phanbell_defconfig | 1 +
