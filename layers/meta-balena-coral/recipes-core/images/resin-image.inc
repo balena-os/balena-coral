@@ -15,6 +15,14 @@ IMAGE_CMD_resinos-img_append () {
     dd if=${DEPLOY_DIR_IMAGE}/imx-boot-${MACHINE}-sd.bin-flash_evk of=${RESIN_RAW_IMG} conv=notrunc seek=33 bs=1K
 }
 
+# These packages are installed for
+# both flasher and normal image
+IMAGE_INSTALL_append = " \
+    imx-board-wlan \
+    coral-imx-firmware \
+    kernel-module-imx-gpu-viv \
+"
+
 DEPENDS += " \
     imx-boot \
 "
