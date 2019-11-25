@@ -16,3 +16,6 @@
 [submodule "layers/meta-coral"]
 	path = layers/meta-coral
 	url = https://github.com/mirzak/meta-coral.git
+[submodule "layers/meta-balena"]
+	path = layers/meta-balena
+	url = https://github.com/balena-os/meta-balena.git
