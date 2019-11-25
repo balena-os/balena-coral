@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+echo 0 > /sys/block/mmcblk0boot0/force_ro
+dd if=/mnt/boot/imx-boot of=/dev/mmcblk0boot0 bs=1k seek=33 conv=notrunc
+echo 1 > /sys/block/mmcblk0boot0/force_ro
