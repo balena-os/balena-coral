@@ -15,6 +15,7 @@ SRCREV = "314516ad4d36dff99b75ddddb5dea43a157859bf"
 # install python just for this, so we re-wrote it in C++
 SRC_URI_append = " \
     file://setup_mac.cpp \
+    file://btfw_loader.service \
 "
 
 inherit systemd
@@ -23,8 +24,10 @@ S = "${WORKDIR}/git"
 
 FILES_${PN} += " /lib/firmware/* \
                  /lib/systemd/system/imx-board-wlan.service \
+                 /lib/systemd/system/btfw_loader.service \
                  /usr/sbin/setup_mac \
                  /etc/wlan_mac.bin \
+                 /etc/bluetooth/bt_nv.bin \
 "
 
 do_compile() {
@@ -55,6 +58,9 @@ do_install() {
 
     # Create placeholder simlink from wlan fw config dir to /tmp, where setup_mac will place mac binaries
     ln -s /tmp/wlan_mac.bin ${D}/lib/firmware/wlan/wlan_mac.bin
+
+    install -d ${D}/etc/bluetooth
+    ln -s /tmp/bt_nv.bin ${D}/etc/bluetooth/.bt_nv.bin
 }
 
-SYSTEMD_SERVICE_${PN} = "imx-board-wlan.service"
+SYSTEMD_SERVICE_${PN} = "imx-board-wlan.service btfw_loader.service"
