@@ -11,9 +11,13 @@
  */
 #define SYSFS_MAC_FORMAT         "%02x:%02x:%02x:%02x:%02x:%02x"
 #define BINARY_MAC_FORMAT        "%02x%02x%02x%02x%02x%02x"
+#define BT_DRIVER_MAC_BINARY     "/tmp/bt_nv.bin"
 #define WIFI_DRIVER_MAC_BINARY   "/tmp/wlan_mac.bin"
 #define SYSFS_PATH               "/sys/class/net/eth0/address"
 #define DVT_MAC                  "f4:f5:e8"
+#define BD_NVITEM                0x02
+#define BD_RDWR_PROT             0x00
+#define BD_NVITEM_SIZE           0x06
 
 /* This check is done as-is, just like in
  * https://coral.googlesource.com/imx-board-wlan/+/refs
@@ -66,6 +70,38 @@ std::string getNextMac(const std::string &mac)
     return ret;
 }
 
+bool writeBTMac()
+{
+    std::ofstream file;
+    bool ret = false;
+    int i, arr[9] = { 0, 0, 0, 0, 0, 0, BD_RDWR_PROT, BD_NVITEM, BD_NVITEM_SIZE };
+
+    std::string currentEthMAC(getNextMac(getCurrentMac()));
+    std::sscanf(currentEthMAC.c_str(), BINARY_MAC_FORMAT, &arr[0], &arr[1], &arr[2], &arr[3], &arr[4], &arr[5]);
+
+    file.open(BT_DRIVER_MAC_BINARY, std::ios::binary);
+
+    // Write the BT MAC address in the format expected by the driver
+    if (file.is_open())
+    {
+        // Header
+        file.write((char*) &arr[7], 1);
+        file.write((char*) &arr[6], 1);
+        file.write((char*) &arr[8], 1);
+
+        /* Resulting address set by the driver
+         * will be the the reversed wifi mac,
+         * just like on mendel os.
+         */
+	for (i = 0; i < 6; i++)
+            file.write((char*) &arr[i], 1);
+
+        ret = true;
+    }
+
+    return ret;
+}
+
 bool writeWifiMacs()
 {
     std::ofstream file;
@@ -103,6 +139,14 @@ int main()
 
         return -1;
     }
+
+    if (!writeBTMac())
+    {
+        fprintf(stderr, "Failed to write BT MAC addresses!\n");
+
+        return -1;
+    }
+
 
     return 0;
 }
