@@ -1,0 +1,47 @@
+From 77673052cb0252ae744f0df8610946f76e1f7cde Mon Sep 17 00:00:00 2001
+From: Jonas Larsson <ljonas@google.com>
+Date: Thu, 30 Aug 2018 14:04:41 -0700
+Subject: [PATCH 2/2] Add new nvm_tlv_3.2.bin from NXP
+
+Change-Id: I8cd9b6a8fa6459de99a8b3a2db240720a154a6e2
+---
+ nvm_tlv_3.2.bin | Bin 0 -> 1968 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 nvm_tlv_3.2.bin
+
+diff --git a/nvm_tlv_3.2.bin b/nvm_tlv_3.2.bin
+new file mode 100644
+index 0000000000000000000000000000000000000000..9920729f12aab376716b39b24f10aba690b5c5e2
+GIT binary patch
+literal 1968
+zcmZuyYiv|S6#mZ4y}P%U?e6XFvi4=mt7S{ECA$dQ<yG3dYz4)tZRHVdQCg`%<)M^_
+zg%S|z55-3ywk8HOkhnBz6p6va5P2yW1!Dp+k)WtQ42jWHBM@89-OJvttKYe2=FFKn
+zGiT<WGb4uF5O5&_w;4$#SGk~N6c`=ZGjegk$~^^HIze7d(ZeVKIpa`@;8?=|rjyWu
+z!$6eT!USF@19xOHW@j3xU)a!SCKe@^E%$mup-@?6`>d^FlIAx`YhriZyKLQ<R8map
+zcT?bTrWlo4US1xM=O$T!kfR3#k(3e^L&3}<!F46_oe?ftleZ2iw-oAB9+E+T&matc
+zriqB^&i|pHF>uUNZ(R02ugue`@Sf9K&C;K|!A<a@N|a$0bo8PbFY)2N42gr(j1*16
+zA@X5}Pi-f!_yI{ArXW5fH%?MMPLY8#RE@LLjxVSQYkAId^eCDT#d`LCiKxXLcnphi
+z09}{^AqXlJBMB1;;lmEp;aS9y6nSW4jtT`eyo1Z6VFSjYT1<2NorbxN+;Js@)5n2h
+z-~Wg=3Rz9%)Ii;|mrm0N%@aGsc~K>y8|?D}Y{TEUM!(5RZeWn6qsp1*2|X=_M-8D%
+zoxkw@hvaG^TaEprhOL%0S)s6&ou2MYA=$00FoLd&yGbKMsze~7_oWLHq$J&Cd^8sc
+z$FA?Xh**5=Efk$Ey@rqX-oW-7as1I%i(VDz;t==p=+BFP#nl7D`1+}ph(EjppRsRI
+zjtCANpdL$|3884Z$7>k=V5n@uq$%N=$jn%L?)-XlQPbi(mo~5H=z4tJh9@^|e)?zN
+z!7;0hq<|K(qcNOwpL6#I7V_z5K#EWlO;H3y(q1>+qbMH5gsK@W_$D(HA`qNhQ8_gh
+zLv<QeY221ZIE~sg3JY&3456f?q_ni8sDSHR#|Qmfj}LKe1cSlxfda#)D2kM-+pDUo
+z)O`g3Rn_yoz5>6`@Nvr@0OoJmvT=QLb2I8YI%a4bQaAHk3xzc6N|@c=R26HO#4$pO
+z#4e7Icj*lML_&nb?V?R=7YD>y@w=#y_wb?qKU(pZ(=j?a2WDgs9id-nqPS1IBCd#9
+zwtQ25sa#hp-8!|3VGm)L{b=uVVOrUxw5`YE;ms&^$$4O9f>l}WmX`+&!;p3f-@m|i
+zE|&{-nQK?<)p(P3`CmKB@TR%79xr8=yk6SGE_3YQ3aZJkdWN2{=|ms<SEeXvgOz4B
+zWQFe5B3pO8u<!MQ?;QEW5msbfxar%8hp)upj2UMGUuuvFq#II)^uXnT?!~x#czrm&
+zCYL^4W09>r(Va`jyDhS{C%bbgTYtJYmrnJL(Zy}KbYYuCw)O$+cl<ZA(2_7)Y)+VF
+zf*XmJ)?9S9wsv;5*;=l<a?z88M|yhr+r8Q0-90`1{jWY}bH9bn0|Rdl+B{&Pe=v3Q
+zwN&cpp%h~<l^STz&g*e}J#&QdKL?EH#%R=fHfiz&d6mB9%Ox5Z;fG@uCUP%78qg`Y
+zTE_;et~M7Z6NyBlx$OSdmKDn@>cio>d3Eu4JXU9#jSY#!lvzbhFJ{urI-7ktPtHlB
+PGSKJgFm?xKc;WpA8Z~$0
+
+literal 0
+HcmV?d00001
+
+-- 
+2.17.1
+

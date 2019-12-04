@@ -1,0 +1,12 @@
+[Unit]
+Description=Bluetooth firmware loader
+After=sysinit.target local-fs.target
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/hciattach /dev/ttymxc1 qca 3000000 flow -b -t 120
+
+[Install]
+WantedBy=basic.target

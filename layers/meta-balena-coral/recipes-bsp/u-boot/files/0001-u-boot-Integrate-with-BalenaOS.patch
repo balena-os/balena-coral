@@ -1,0 +1,193 @@
+From c368a0ec5a9b7eea0f7cf93de6c8c80292f68054 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Tue, 19 Nov 2019 10:40:43 +0100
+Subject: [PATCH 1/2] u-boot: Integrate with BalenaOS
+
+Integrate u-boot with BalenaOS
+for coral dev board
+
+Fix other issues comming from
+fastboot, which cannot be disabled
+from configs.
+
+Upstream-status: Inappropriate[configuration]
+Signed-of-by: Alexandru Costache <alexandru@balena.io>
+---
+ .../imx8mq_phanbell/imx8m_phanbell.c          | 17 -----------
+ common/env_common.c                           | 11 +++++++
+ drivers/usb/gadget/f_fastboot.c               | 29 -------------------
+ include/configs/imx8mq_phanbell.h             | 18 ++++++------
+ include/configs/imx8qm_mek_android.h          |  8 -----
+ include/configs/mx_android_common.h           |  3 --
+ 6 files changed, 20 insertions(+), 66 deletions(-)
+
+diff --git a/board/freescale/imx8mq_phanbell/imx8m_phanbell.c b/board/freescale/imx8mq_phanbell/imx8m_phanbell.c
+index b066ed2a5e..110f5083c1 100644
+--- a/board/freescale/imx8mq_phanbell/imx8m_phanbell.c
++++ b/board/freescale/imx8mq_phanbell/imx8m_phanbell.c
+@@ -332,23 +332,6 @@ int board_late_init(void)
+ 	setenv("board_rev", "iMX8MQ");
+ #endif
+ 
+-/* If we aren't supporting Android, set the default boot command
+- * to run boot.scr from partition one of the boot device.
+- */
+-#ifdef CONFIG_SD_BOOT
+-	static char bootdev[32];
+-	static char bootcmd[128];
+-	snprintf(bootdev, sizeof(bootdev), "%d", mmc_dev);
+-	setenv("bootdev", bootdev);
+-	/* For Zircon, try booting from mmc if ext2load fails */
+-	snprintf(bootcmd, sizeof(bootcmd), "ext2load mmc %d:1 ${loadaddr} boot.scr; source; boota mmc0 boot_a;", mmc_dev);
+-	setenv("bootcmd", bootcmd);
+-#endif
+-
+-#ifdef CONFIG_ENV_IS_IN_MMC
+-	board_late_mmc_env_init();
+-#endif
+-
+ 	return 0;
+ }
+ 
+diff --git a/common/env_common.c b/common/env_common.c
+index 7fb62e8b45..e10292c150 100644
+--- a/common/env_common.c
++++ b/common/env_common.c
+@@ -194,6 +194,17 @@ int env_import(const char *buf, int check)
+ 	env_t *ep = (env_t *)buf;
+ 	int ret;
+ 
++       /* Setting CONFIG_ENV_IS_NOWHERE triggers compilation
++        * failure for setups that have the fastboot patches.
++        * Disabling fastboot config triggers others failures.
++        *
++        * Simply force using BalenaOS environment, the one embedded
++        * in the boot binary, and leave the eMMC one intact.
++        */
++       set_default_env("Switch to BalenaOS environment... \n");
++
++       return 0;
++
+ 	if (check) {
+ 		uint32_t crc;
+ 
+diff --git a/drivers/usb/gadget/f_fastboot.c b/drivers/usb/gadget/f_fastboot.c
+index 42f1959fb3..18b2b2fb22 100755
+--- a/drivers/usb/gadget/f_fastboot.c
++++ b/drivers/usb/gadget/f_fastboot.c
+@@ -1186,35 +1186,6 @@ unsigned int fastboot_flash_get_ptn_count(void)
+ #ifdef CONFIG_FSL_FASTBOOT
+ void board_fastboot_setup(void)
+ {
+-#if defined(CONFIG_FASTBOOT_STORAGE_MMC)
+-	static char boot_dev_part[32];
+-	u32 dev_no;
+-#endif
+-	switch (get_boot_device()) {
+-#if defined(CONFIG_FASTBOOT_STORAGE_MMC)
+-	case SD1_BOOT:
+-	case SD2_BOOT:
+-	case SD3_BOOT:
+-	case SD4_BOOT:
+-	case MMC1_BOOT:
+-	case MMC2_BOOT:
+-	case MMC3_BOOT:
+-	case MMC4_BOOT:
+-	case USB_BOOT:
+-		dev_no = mmc_get_env_dev();
+-		sprintf(boot_dev_part,"mmc%d",dev_no);
+-		if (!getenv("fastboot_dev"))
+-			setenv("fastboot_dev", boot_dev_part);
+-		sprintf(boot_dev_part, "boota mmc%d", dev_no);
+-		if (!getenv("bootcmd"))
+-			setenv("bootcmd", boot_dev_part);
+-		break;
+-#endif /*CONFIG_FASTBOOT_STORAGE_MMC*/
+-	default:
+-		printf("unsupported boot devices\n");
+-		break;
+-	}
+-
+ 	/* add soc type into bootargs */
+ 	if (is_mx6dqp()) {
+ 		if (!getenv("soc_type"))
+diff --git a/include/configs/imx8mq_phanbell.h b/include/configs/imx8mq_phanbell.h
+index f903060a4c..5170c54078 100644
+--- a/include/configs/imx8mq_phanbell.h
++++ b/include/configs/imx8mq_phanbell.h
+@@ -124,7 +124,7 @@
+ 	"mmcpart=" __stringify(CONFIG_SYS_MMC_IMG_LOAD_PART) "\0" \
+ 	"mmcroot=" CONFIG_MMCROOT " rootwait rw\0" \
+ 	"mmcautodetect=yes\0" \
+-	"mmcargs=setenv bootargs console=${console} root=${mmcroot}\0 " \
++	"mmcargs=setenv bootargs console=${console} ${resin_kernel_root} ro rootwait ${os_cmdline}\0" \
+ 	"loadbootscript=fatload mmc ${mmcdev}:${mmcpart} ${loadaddr} ${script};\0" \
+ 	"bootscript=echo Running bootscript from mmc ...; " \
+ 		"source\0" \
+@@ -163,14 +163,14 @@
+ 		"fi;\0"
+ 
+ #define CONFIG_BOOTCOMMAND \
++           "setenv resin_kernel_load_addr ${loadaddr};" \
++           "run resin_set_kernel_root; run set_os_cmdline;" \
++           "setenv mmcdev ${resin_dev_index};" \
++           "setenv mmcpart ${resin_boot_part};" \
+ 	   "mmc dev ${mmcdev}; if mmc rescan; then " \
+-		   "if run loadbootscript; then " \
+-			   "run bootscript; " \
+-		   "else " \
+-			   "if run loadimage; then " \
+-				   "run mmcboot; " \
+-			   "else run netboot; " \
+-			   "fi; " \
++		   "if run loadimage; then " \
++			   "run mmcboot; " \
++		   "else run netboot; " \
+ 		   "fi; " \
+ 	   "else booti ${loadaddr} - ${fdt_addr}; fi"
+ 
+@@ -189,7 +189,7 @@
+ 
+ #define CONFIG_ENV_OVERWRITE
+ #define CONFIG_ENV_OFFSET               (64 * SZ_64K)
+-#define CONFIG_ENV_SIZE			0x1000
++#define CONFIG_ENV_SIZE			0x4000
+ #define CONFIG_ENV_IS_IN_MMC
+ #define CONFIG_SYS_MMC_ENV_DEV		0   /* USDHC2 */
+ #define CONFIG_MMCROOT			"/dev/mmcblk1p2"  /* USDHC2 */
+diff --git a/include/configs/imx8qm_mek_android.h b/include/configs/imx8qm_mek_android.h
+index 63c226e0e7..811eb31147 100644
+--- a/include/configs/imx8qm_mek_android.h
++++ b/include/configs/imx8qm_mek_android.h
+@@ -55,14 +55,6 @@
+ #define CONFIG_SUPPORT_RAW_INITRD
+ #define CONFIG_SERIAL_TAG
+ 
+-#undef CONFIG_EXTRA_ENV_SETTINGS
+-#undef CONFIG_BOOTCOMMAND
+-
+-#define CONFIG_EXTRA_ENV_SETTINGS					\
+-	"splashpos=m,m\0"	  \
+-	"fdt_high=0xffffffffffffffff\0"	  \
+-	"initrd_high=0xffffffffffffffff\0" \
+-
+ #define CONFIG_FASTBOOT_BUF_ADDR   CONFIG_SYS_LOAD_ADDR
+ #define CONFIG_FASTBOOT_BUF_SIZE   0x19000000
+ 
+diff --git a/include/configs/mx_android_common.h b/include/configs/mx_android_common.h
+index 6a00ef229e..18f6858cbf 100644
+--- a/include/configs/mx_android_common.h
++++ b/include/configs/mx_android_common.h
+@@ -40,9 +40,6 @@
+ #define CONFIG_SUPPORT_RAW_INITRD
+ #define CONFIG_SERIAL_TAG
+ 
+-#undef CONFIG_EXTRA_ENV_SETTINGS
+-#undef CONFIG_BOOTCOMMAND
+-
+ #define CONFIG_EXTRA_ENV_SETTINGS	\
+ 	"splashpos=m,m\0"	\
+ 	"fdt_high=0xffffffff\0"	\
+-- 
+2.17.1
+

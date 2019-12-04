@@ -1,0 +1,50 @@
+From 13058b992cfb9f0aa7a59f0304dc156abdb61ee0 Mon Sep 17 00:00:00 2001
+From: Jonas Larsson <ljonas@google.com>
+Date: Wed, 29 Aug 2018 22:25:54 -0700
+Subject: [PATCH 1/2] Remove nvm_tlv_3.2.bin
+
+It doesn't checksum match upstream linux-firmware and doesn't work
+together with upstream rampatch_tlv_3.2.tlv.
+
+Change-Id: I34eb82c03e7d0c2f5c3c7a998db32bbcabf86272
+---
+ nvm_tlv_3.2.bin | Bin 1968 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 nvm_tlv_3.2.bin
+
+diff --git a/nvm_tlv_3.2.bin b/nvm_tlv_3.2.bin
+deleted file mode 100644
+index b31a98d7be4905bc6acd1177c25a249eb2a0fb20..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 1968
+zcmZuyeQXp(6#u=M-Mj5_z1!X$XTNOuYPnKu$sNM=pitU9u7YCKw(=2eQK;0Q@}ZQ7
+zr9~9#ABrD=*qRvBK;l8vC=!E-A@ZeQ6pRVPM1rFJVMvUo8iCmQ_Lke8r@yyv=FOXV
+zGjC?!n-K@y5O5&_w;4$#SGu5O6c`=ZHF9D8id_X+x~IvjDS8+sAZHwvBIq<=0Mkim
+z!C@fEY+(W~lz}@k8M8ADG%RRrG7}4vOP6`Qp-`x-vSZfPF-h|qr8TiT?q0fXOe!fR
+z^}8wXI8%&DEiW$*$a9mdK*-Spf=EgUi=kj<k>I)#`OXLzt;t&llv@gQDi6sZz-JJK
+zKhs1+b?5(3&=ff8X)rGNpI7R&D!k|PR<racZ*UX5s1jvZ2_3y?!ApF&FGFHKwID^4
+zaDaR`$fx!UulNB;9HJmTBsWe_K2DN>(^QQ!)PXOk8EbjYv-B{U5yg7;f3c{=ZFmHW
+zun%3B10e`16(b1~3E{(b)Ztmgkra7oXO0R5HN1mMq+tWbp;}CH{GEomj@)@Ugj2_W
+zqu>9CHwsxz<<v;sw3|-R2-S=2;+&|G&<*x^KKk%CuF`Mvq8k{Z>8Nt%c}!1>;ZZ~A
+zQs*zc_W`+z$W~+Ts9~#RO;#wZWv8b*Q%H6zD~zD);!e`YkSY;~=zZzJ1Sv^(86V9>
+z!m;bWCL$IeeG5hBO0VMM-Pf`0dK`bW*P>Six;VtWJo@wEUvXvMFus0b1>z4b#%JtX
+zlp}&e2WY?&XF@2N?(rIiKNu>TFlkD-CNeV?pF6L?T-dzm_9ZRLJG&lTx8d<ko1gp{
+zxPQzlBPpN->}U*U-Dlkcfdzc}8IU3rMN<?3k+j!M_b7@-F`;TkE56ALg$M*ES5!`o
+z#Za9_RT{UX5l*8vjl#m43PUI<DJd;2DJtOl=J7#4*W*K68^K_3e4xPaDT*Sc>h`Lt
+zDs^8$Kvng8udl%GGko0g2Y`87wrpJA($a#4&dwPcht!Sy)<Pl8x)Nr0G*`tMCvl9B
+zBC&%b<Xt*VKamh2ajR$-+r&O`M*J=+<XwEI|Bp8O<#ddW&Vd=(MThAZnkeoOuZYW{
+zmM!0uUn<wsO1DmJV%S3%W<NUmU6@vOF>UMdcz834U2+~+nP63xyXECU!!V>>!uKz*
+zoy+BdUFO;qdo|vqUH;e3GQ44Kt;b8*C9jt@vCAAgxPof(tDb{T*>t?0{VP)xw8Kg>
+z8?r)oYmu!xUfA>c{&x<4;t0#LF5L9(#KTwMP{xe2fiE>k1=0<vLwexyK=)!?KD<60
+zTa!zluCd709`DYjW8D_n+7sQml&wG2n@cBq$LK;|E}ieQ$kyJ6y^jB87FrW#tIY}1
+zOmHL7+LnveZEdSpx7%8-yK>Q!g@<~2_}jVJ;hjA_0|T!<XY+uC&4Yt)57|6uVPGhA
+z<h4}l$bl4ND3u!Q$j<9=d_8l7@jnNQ=*DQ&dNyhDd3lAt<;x`+7~zLw7AA5pKN`>}
+zxJt(cs;)K{B@>B6lezTXw$|m#DjLG!y860!JRYkv&8EggV#=(d<`*+*W}VHRoG0gm
+QQ5op>bQ(JYGraKr1K!AZWB>pF
+
+-- 
+2.17.1
+
