@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'coral-dev: Set blink to unsupported'
+      hash: eed7cdc472ca0c5f0a8f4f22085d1b4dbcd93465
+      body: |
+        We don't support led blink for this device
+        type, so let's ensure the blink icon doesn't
+        show up in the dashboard.
+      footer:
+        Changelog-entry: 'coral-dev: Set blink to unsupported'
+        changelog-entry: 'coral-dev: Set blink to unsupported'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.45.1+rev2
+  date: 2019-12-04T18:27:04.261Z
+- commits:
     - subject: 'balena-yocto-scripts: Add submodule at v1.5.2'
       hash: 268cf581eeb654089e491384c9d5cc7f7681510a
       body: ''
