@@ -1,1 +1,12 @@
-[]
+- commits:
+    - subject: 'balena-yocto-scripts: Add submodule at v1.5.2'
+      hash: 268cf581eeb654089e491384c9d5cc7f7681510a
+      body: ''
+      footer:
+        Changelog-entry: 'balena-yocto-scripts: Add submodule at v1.5.2'
+        changelog-entry: 'balena-yocto-scripts: Add submodule at v1.5.2'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.45.1+rev1
+  date: 2019-12-04T11:53:35.164Z
