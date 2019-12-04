@@ -32,6 +32,8 @@ module.exports =
 		osx: 'http://docs.resin.io/coral-dev/nodejs/getting-started/#adding-your-first-device'
 		linux: 'http://docs.resin.io/coral-dev/nodejs/getting-started/#adding-your-first-device'
 
+	supportsBlink: false
+
 	yocto:
 		machine: 'coral-dev'
 		image: 'resin-image-flasher'
