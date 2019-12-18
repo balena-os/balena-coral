@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'coral-dev: Add sd step after switching boot pins'
+      hash: c76c9802fdad6a13230e11de43b735223521d205
+      body: |
+        Step eject_sd from common instructions needs to
+        be mentioned as step 4 in the dashboard, right after
+        switching boot pins to EMMC.
+      footer:
+        Changelog-entry: 'coral-dev: Add sd step after switching boot pins'
+        changelog-entry: 'coral-dev: Add sd step after switching boot pins'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.45.1+rev3
+  date: 2019-12-18T13:09:57.263Z
+- commits:
     - subject: 'coral-dev: Set blink to unsupported'
       hash: eed7cdc472ca0c5f0a8f4f22085d1b4dbcd93465
       body: |
