@@ -24,6 +24,7 @@ module.exports =
 	instructions: [
 		SWITCH_SD
 		instructions.ETCHER_SD
+		instructions.EJECT_SD
 		instructions.FLASHER_WARNING
 	].concat(postProvisioningInstructions)
 
