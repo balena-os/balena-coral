@@ -9,3 +9,9 @@ RESIN_CONFIGS_append = " \
 RESIN_CONFIGS[cfg80211_builtin] = " \
     CONFIG_CFG80211=y \
 "
+
+# This helps the kernel version
+# match the one of the container installed
+# galcore module from imx-gpu-viv deb
+LOCALVERSION = "-imx"
+SCMVERSION="n"
