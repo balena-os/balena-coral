@@ -16,7 +16,7 @@ module.exports =
 	slug: 'coral-dev'
 	name: 'Google Coral Dev Board'
 	arch: 'aarch64'
-	state: 'experimental'
+	state: 'new'
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
