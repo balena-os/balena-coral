@@ -29,9 +29,9 @@ module.exports =
 	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
-		windows: 'http://docs.resin.io/coral-dev/nodejs/getting-started/#adding-your-first-device'
-		osx: 'http://docs.resin.io/coral-dev/nodejs/getting-started/#adding-your-first-device'
-		linux: 'http://docs.resin.io/coral-dev/nodejs/getting-started/#adding-your-first-device'
+		windows: 'https://www.balena.io/docs/learn/getting-started/coral-dev/nodejs/'
+		osx: 'https://www.balena.io/docs/learn/getting-started/coral-dev/nodejs/'
+		linux: 'https://www.balena.io/docs/learn/getting-started/coral-dev/nodejs/'
 
 	supportsBlink: false
 
