@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update links to getting started guide from resin.io to balena.io
+      hash: 5141f0f07e31ff37a860c037e70042304d770892
+      body: ''
+      footer:
+        Changelog-entry: Update links to getting started guide from resin.io to balena.io
+        changelog-entry: Update links to getting started guide from resin.io to balena.io
+        Signed-off-by: Gareth Davies <gareth@balena.io>
+        signed-off-by: Gareth Davies <gareth@balena.io>
+      author: Gareth Davies
+  version: 2.46.1+rev3
+  date: 2020-02-12T10:10:05.840Z
+- commits:
     - subject: Change the state to 'new' in the coffee file
       hash: ee44552dde0d4a49cb495fa0fa4908958c519021
       body: |

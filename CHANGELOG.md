@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.46.1+rev3
+## (2020-02-12)
+
+* Update links to getting started guide from resin.io to balena.io [Gareth Davies]
+
 # v2.46.1+rev2
 ## (2020-01-17)
 
