@@ -21,6 +21,7 @@ IMAGE_INSTALL_append = " \
     imx-board-wlan \
     coral-imx-firmware \
     kernel-module-wlan \
+    kernel-devicetree \
 "
 
 DEPENDS += " \
