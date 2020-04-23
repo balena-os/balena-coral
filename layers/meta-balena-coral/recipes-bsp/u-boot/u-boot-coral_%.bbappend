@@ -14,8 +14,5 @@ SRCREV = "8523a101cd4dda7ca62d3f99c4bd1b3718cca953"
 
 
 SRC_URI_append = " \
-    file://0001-u-boot-Enable-CMD_PART-config.patch \
-    file://0001-u-boot-Integrate-with-BalenaOS.patch \
-    file://0002-Remove-undefs.patch \
-    file://0001-Fix-bootcount-issues-due-to-missing-commands.patch \
+    file://0001-u-boot-Integrate-with-BalenaOS-load-kernel-from-root.patch \
 "
