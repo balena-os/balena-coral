@@ -1,0 +1,10 @@
+[Unit]
+Description=Wifi & BT MAC Setup and driver loading
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/setup_mac
+ExecStartPost=/bin/bash -c 'modprobe wlan'
+
+[Install]
+WantedBy=multi-user.target
