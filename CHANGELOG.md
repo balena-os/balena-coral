@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev2
+## (2020-05-01)
+
+* linux-imx: Enable CP15 barrier instructions emulation [Alexandru Costache]
+
 # v2.48.0+rev1
 ## (2020-04-23)
 

@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'linux-imx: Enable CP15 barrier instructions emulation'
+      hash: ef89784500a2d6872d2995f3a24ca718b4069b2d
+      body: |
+        Enable software emulation for deprecated aarch32
+        userspace instructions. This allows for running
+        some prebuilt armv7 binaries that would otherwise
+        crash on aarch64.
+      footer:
+        Changelog-entry: 'linux-imx: Enable CP15 barrier instructions emulation'
+        changelog-entry: 'linux-imx: Enable CP15 barrier instructions emulation'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.48.0+rev2
+  date: 2020-05-01T18:28:11.893Z
+- commits:
     - subject: Do not use wireless-regdb-static until we move to kernel >= 4.15
       hash: 217e5b93cc3cc37104793d6922dc2ce5f14a8a87
       body: |
