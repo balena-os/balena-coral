@@ -1,4 +1,16 @@
 - commits:
+    - subject: Set private to false in .coffee files for the public device types
+      hash: 13472362a8dd2708ca1d6ee4a87d5b747e25c842
+      body: ''
+      footer:
+        Changelog-entry: Set private to false in .coffee files for the public device types
+        changelog-entry: Set private to false in .coffee files for the public device types
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.48.0+rev3
+  date: 2020-05-12T08:35:43.115Z
+- commits:
     - subject: 'linux-imx: Enable CP15 barrier instructions emulation'
       hash: ef89784500a2d6872d2995f3a24ca718b4069b2d
       body: |
