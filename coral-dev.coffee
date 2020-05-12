@@ -17,6 +17,7 @@ module.exports =
 	name: 'Google Coral Dev Board'
 	arch: 'aarch64'
 	state: 'new'
+	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
