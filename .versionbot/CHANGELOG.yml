@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'coral-dev: Update icon to new approved variant'
+      hash: b43b2da5169f43b94f50808f5f75f03154671175
+      body: |
+        Icon format adapted by the Balena design team,
+        does not include any text.
+      footer:
+        Changelog-entry: 'coral-dev: Update icon to new approved variant'
+        changelog-entry: 'coral-dev: Update icon to new approved variant'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.48.0+rev5
+  date: 2020-05-13T18:46:16.977Z
+- commits:
     - subject: 'coral-dev: Update icon to new variant'
       hash: 4f75685169c2c01a5c677822d492dcfb4a7dbd94
       body: |
