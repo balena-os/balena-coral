@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev4
+## (2020-05-13)
+
+* coral-dev: Update icon to new variant [Alexandru Costache]
+
 # v2.48.0+rev3
 ## (2020-05-12)
 
