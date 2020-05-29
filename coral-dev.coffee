@@ -30,9 +30,9 @@ module.exports =
 	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
-		windows: 'https://www.balena.io/docs/learn/getting-started/coral-dev/nodejs/'
-		osx: 'https://www.balena.io/docs/learn/getting-started/coral-dev/nodejs/'
-		linux: 'https://www.balena.io/docs/learn/getting-started/coral-dev/nodejs/'
+		windows: 'https://www.balena.io/docs/learn/getting-started/coral-dev/python/'
+		osx: 'https://www.balena.io/docs/learn/getting-started/coral-dev/python/'
+		linux: 'https://www.balena.io/docs/learn/getting-started/coral-dev/python/'
 
 	supportsBlink: false
 
