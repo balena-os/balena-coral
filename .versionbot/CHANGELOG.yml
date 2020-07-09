@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.8.0
+      hash: 07f5c5f58ab37426a5a8d1cbf7185c50717035e1
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.8.0
+        changelog-entry: Update balena-yocto-scripts to v1.8.0
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.50.1+rev2
+  date: 2020-07-09T09:33:05.440Z
+- commits:
     - subject: Update meta-rust to include 1.36
       hash: 8d6f4d10038bb53e9d6bdd50ec3ed8b6bd110277
       body: ''
