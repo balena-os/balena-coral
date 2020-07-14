@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.50.1+rev3
+## (2020-07-14)
+
+* coral-dev: Re-label device in dashboard [Alexandru Costache]
+
 # v2.50.1+rev2
 ## (2020-07-09)
 

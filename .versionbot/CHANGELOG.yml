@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'coral-dev: Re-label device in dashboard'
+      hash: dcb5bff305825f7c596d533213a212405ebfc0d7
+      body: |
+        Outreach team asked to have this device
+        type renamed to Coral Dev Board
+      footer:
+        Changelog-entry: 'coral-dev: Re-label device in dashboard'
+        changelog-entry: 'coral-dev: Re-label device in dashboard'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.50.1+rev3
+  date: 2020-07-14T09:45:56.802Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.8.0
       hash: 07f5c5f58ab37426a5a8d1cbf7185c50717035e1
       body: ''
