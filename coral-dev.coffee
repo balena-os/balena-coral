@@ -14,7 +14,7 @@ postProvisioningInstructions = [
 module.exports =
 	version: 1
 	slug: 'coral-dev'
-	name: 'Google Coral Dev Board'
+	name: 'Coral Dev Board'
 	arch: 'aarch64'
 	state: 'new'
 	private: false
