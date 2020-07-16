@@ -1,0 +1,57 @@
+From 49a21d8a6cf8a0cb1037ec6f0234baa4c0ca6f2f Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Thu, 16 Jul 2020 10:19:09 +0200
+Subject: [PATCH] coral-dev: enable kernel unzip
+
+Running out of space on the rootfs starting
+with v2.50.1, so we need to compress the kernel
+to be able to HUP
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ configs/mx8mq_phanbell_defconfig  | 1 +
+ include/configs/imx8mq_phanbell.h | 5 +++--
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/configs/mx8mq_phanbell_defconfig b/configs/mx8mq_phanbell_defconfig
+index c55b8c2b77..e97530baaa 100644
+--- a/configs/mx8mq_phanbell_defconfig
++++ b/configs/mx8mq_phanbell_defconfig
+@@ -45,3 +45,4 @@ CONFIG_CMD_IMPORTENV=y
+ CONFIG_CMD_PART=y
+ CONFIG_CMD_EXPORTENV=y
+ CONFIG_FAT_WRITE=y
++CONFIG_CMD_UNZIP=y
+diff --git a/include/configs/imx8mq_phanbell.h b/include/configs/imx8mq_phanbell.h
+index 5b948ad63e..006b1dda8a 100644
+--- a/include/configs/imx8mq_phanbell.h
++++ b/include/configs/imx8mq_phanbell.h
+@@ -112,13 +112,14 @@
+ #define CONFIG_EXTRA_ENV_SETTINGS		\
+ 	CONFIG_MFG_ENV_SETTINGS \
+ 	"script=boot.scr\0" \
+-	"image=Image\0" \
++	"image=Image.gz\0" \
+ 	"console=ttymxc0,115200 earlycon=ec_imx6q,0x30860000,115200\0" \
+ 	"fdt_addr=0x43000000\0"			\
+ 	"fdt_high=0xffffffffffffffff\0"		\
+ 	"boot_fdt=try\0" \
+ 	"fdt_file=fsl-imx8mq-phanbell.dtb\0" \
+ 	"initrd_addr=0x43800000\0"		\
++	"zip_addr=0x43800000\0" \
+ 	"initrd_high=0xffffffffffffffff\0" \
+ 	"mmcdev="__stringify(CONFIG_SYS_MMC_ENV_DEV)"\0" \
+ 	"mmcpart=" __stringify(CONFIG_SYS_MMC_IMG_LOAD_PART) "\0" \
+@@ -128,7 +129,7 @@
+ 	"loadbootscript=fatload mmc ${mmcdev}:${mmcpart} ${loadaddr} ${script};\0" \
+ 	"bootscript=echo Running bootscript from mmc ...; " \
+ 		"source\0" \
+-	"loadimage=ext4load mmc ${mmcdev}:${resin_root_part} ${loadaddr} boot/${image}\0" \
++	"loadimage=ext4load mmc ${mmcdev}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr};\0" \
+ 	"loadfdt=ext4load mmc ${mmcdev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}\0" \
+ 	"mmcboot=echo Booting from mmc ...; " \
+ 		"run mmcargs; " \
+-- 
+2.17.1
+
