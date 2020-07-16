@@ -5,7 +5,7 @@ IMAGE_FSTYPES_append_coral-dev = " resinos-img"
 RESIN_BOOT_SIZE = "80960"
 
 RESIN_BOOT_PARTITION_FILES = " \
-    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/Image \
+    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/Image.gz \
     fsl-imx8mq-phanbell.dtb:/ \
     imx-boot:/ \
 "
