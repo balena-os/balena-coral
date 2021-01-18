@@ -15,6 +15,4 @@ SRCREV = "8523a101cd4dda7ca62d3f99c4bd1b3718cca953"
 
 SRC_URI_append = " \
     file://u-boot-Integrate-with-BalenaOS-load-kernel-from-root.patch \
-    file://kconfig-Add-fsuuid-command.patch \
-    file://coral-dev-enable-unzip-kernel.patch \
 "
