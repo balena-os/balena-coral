@@ -1,6 +1,6 @@
-From 740172c4d999e1502804d85657b4f92b6be5fed9 Mon Sep 17 00:00:00 2001
+From c19665b2dcd5b53fb2284cd0e6a9a4e31e5d4e93 Mon Sep 17 00:00:00 2001
 From: Alexandru Costache <alexandru@balena.io>
-Date: Wed, 22 Apr 2020 18:13:59 +0200
+Date: Mon, 18 Jan 2021 17:17:46 +0100
 Subject: [PATCH] u-boot: Integrate with BalenaOS, load kernel from rootfs
 
 Many patches have been added to get the board
@@ -17,20 +17,37 @@ prevent failed boot this way in the future.
 Upstream-status: Inappropriate [configuration]
 Signed-off-by: Alexandru Costache <alexandru@balena.io>
 ---
+ Kconfig                                       |  5 ++++
  .../imx8mq_phanbell/imx8m_phanbell.c          | 17 -----------
  common/env_common.c                           | 11 +++++++
- configs/mx8mq_phanbell_defconfig              |  3 ++
+ configs/mx8mq_phanbell_defconfig              |  5 ++++
  drivers/usb/gadget/f_fastboot.c               | 29 -------------------
  include/configs/imx8mq_evk_android.h          |  8 -----
  include/configs/imx8mq_evk_androidthings.h    |  7 -----
- include/configs/imx8mq_phanbell.h             | 25 ++++++++--------
+ include/configs/imx8mq_phanbell.h             | 28 +++++++++---------
  include/configs/imx8qm_arm2_android.h         |  8 -----
  include/configs/imx8qm_mek_android.h          |  8 -----
  include/configs/imx8qxp_arm2_android.h        |  8 -----
  include/configs/imx8qxp_mek_android.h         |  7 -----
  include/configs/mx_android_common.h           |  3 --
- 12 files changed, 27 insertions(+), 107 deletions(-)
+ 13 files changed, 36 insertions(+), 108 deletions(-)
 
+diff --git a/Kconfig b/Kconfig
+index 02f954d64e..0240d72faa 100644
+--- a/Kconfig
++++ b/Kconfig
+@@ -325,6 +325,11 @@ config ARCH_FIXUP_FDT_MEMORY
+ 	  used for booting OS with different memory setup where the part of
+ 	  the memory location should be used for different purpose.
+ 
++config CMD_FS_UUID
++        bool "fsuuid command"
++        help
++          Enables fsuuid command for filesystem UUID.
++
+ endmenu		# Boot images
+ 
+ source "api/Kconfig"
 diff --git a/board/freescale/imx8mq_phanbell/imx8m_phanbell.c b/board/freescale/imx8mq_phanbell/imx8m_phanbell.c
 index b066ed2a5e..110f5083c1 100644
 --- a/board/freescale/imx8mq_phanbell/imx8m_phanbell.c
@@ -82,16 +99,18 @@ index 7fb62e8b45..e10292c150 100644
  		uint32_t crc;
  
 diff --git a/configs/mx8mq_phanbell_defconfig b/configs/mx8mq_phanbell_defconfig
-index 74a6fdcc14..c55b8c2b77 100644
+index 74a6fdcc14..f5d18b7ee4 100644
 --- a/configs/mx8mq_phanbell_defconfig
 +++ b/configs/mx8mq_phanbell_defconfig
-@@ -42,3 +42,6 @@ CONFIG_ANDROID_BOOT_IMAGE=y
+@@ -42,3 +42,8 @@ CONFIG_ANDROID_BOOT_IMAGE=y
  CONFIG_ZIRCON_BOOT_IMAGE=y
  CONFIG_SD_BOOT=y
  CONFIG_CMD_IMPORTENV=y
 +CONFIG_CMD_PART=y
 +CONFIG_CMD_EXPORTENV=y
 +CONFIG_FAT_WRITE=y
++CONFIG_CMD_UNZIP=y
++CONFIG_CMD_FS_UUID=y
 diff --git a/drivers/usb/gadget/f_fastboot.c b/drivers/usb/gadget/f_fastboot.c
 index 42f1959fb3..18b2b2fb22 100755
 --- a/drivers/usb/gadget/f_fastboot.c
@@ -167,7 +186,7 @@ index cf68349d7b..66d90b5070 100644
  
  #endif /* IMX8MQ_EVK_ANDROID_THINGS_H */
 diff --git a/include/configs/imx8mq_phanbell.h b/include/configs/imx8mq_phanbell.h
-index f903060a4c..df05e22a0a 100644
+index f903060a4c..006b1dda8a 100644
 --- a/include/configs/imx8mq_phanbell.h
 +++ b/include/configs/imx8mq_phanbell.h
 @@ -70,7 +70,7 @@
@@ -179,7 +198,21 @@ index f903060a4c..df05e22a0a 100644
  #undef CONFIG_CMD_IMLS
  
  #undef CONFIG_CMD_CRC32
-@@ -124,12 +124,12 @@
+@@ -112,24 +112,25 @@
+ #define CONFIG_EXTRA_ENV_SETTINGS		\
+ 	CONFIG_MFG_ENV_SETTINGS \
+ 	"script=boot.scr\0" \
+-	"image=Image\0" \
++	"image=Image.gz\0" \
+ 	"console=ttymxc0,115200 earlycon=ec_imx6q,0x30860000,115200\0" \
+ 	"fdt_addr=0x43000000\0"			\
+ 	"fdt_high=0xffffffffffffffff\0"		\
+ 	"boot_fdt=try\0" \
+ 	"fdt_file=fsl-imx8mq-phanbell.dtb\0" \
+ 	"initrd_addr=0x43800000\0"		\
++	"zip_addr=0x43800000\0" \
+ 	"initrd_high=0xffffffffffffffff\0" \
+ 	"mmcdev="__stringify(CONFIG_SYS_MMC_ENV_DEV)"\0" \
  	"mmcpart=" __stringify(CONFIG_SYS_MMC_IMG_LOAD_PART) "\0" \
  	"mmcroot=" CONFIG_MMCROOT " rootwait rw\0" \
  	"mmcautodetect=yes\0" \
@@ -190,12 +223,12 @@ index f903060a4c..df05e22a0a 100644
  		"source\0" \
 -	"loadimage=fatload mmc ${mmcdev}:${mmcpart} ${loadaddr} ${image}\0" \
 -	"loadfdt=fatload mmc ${mmcdev}:${mmcpart} ${fdt_addr} ${fdt_file}\0" \
-+	"loadimage=ext4load mmc ${mmcdev}:${resin_root_part} ${loadaddr} boot/${image}\0" \
++	"loadimage=ext4load mmc ${mmcdev}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr};\0" \
 +	"loadfdt=ext4load mmc ${mmcdev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}\0" \
  	"mmcboot=echo Booting from mmc ...; " \
  		"run mmcargs; " \
  		"if test ${boot_fdt} = yes || test ${boot_fdt} = try; then " \
-@@ -163,14 +163,14 @@
+@@ -163,14 +164,14 @@
  		"fi;\0"
  
  #define CONFIG_BOOTCOMMAND \
@@ -217,7 +250,7 @@ index f903060a4c..df05e22a0a 100644
  		   "fi; " \
  	   "else booti ${loadaddr} - ${fdt_addr}; fi"
  
-@@ -189,7 +189,7 @@
+@@ -189,7 +190,7 @@
  
  #define CONFIG_ENV_OVERWRITE
  #define CONFIG_ENV_OFFSET               (64 * SZ_64K)
@@ -226,7 +259,7 @@ index f903060a4c..df05e22a0a 100644
  #define CONFIG_ENV_IS_IN_MMC
  #define CONFIG_SYS_MMC_ENV_DEV		0   /* USDHC2 */
  #define CONFIG_MMCROOT			"/dev/mmcblk1p2"  /* USDHC2 */
-@@ -233,6 +233,7 @@
+@@ -233,6 +234,7 @@
  #define CONFIG_CMD_EXT4
  #define CONFIG_CMD_EXT4_WRITE
  #define CONFIG_CMD_FAT
