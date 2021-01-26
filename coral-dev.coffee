@@ -17,7 +17,6 @@ module.exports =
 	name: 'Coral Dev Board'
 	arch: 'aarch64'
 	state: 'new'
-	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
