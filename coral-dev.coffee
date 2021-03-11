@@ -37,10 +37,10 @@ module.exports =
 
 	yocto:
 		machine: 'coral-dev'
-		image: 'resin-image-flasher'
-		fstype: 'resinos-img'
+		image: 'balena-image-flasher'
+		fstype: 'balenaos-img'
 		version: 'yocto-warrior'
-		deployArtifact: 'resin-image-flasher-coral-dev.resinos-img'
+		deployArtifact: 'balena-image-flasher-coral-dev.balenaos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]
