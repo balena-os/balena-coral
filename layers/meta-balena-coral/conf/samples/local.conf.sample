@@ -57,6 +57,6 @@ BB_DISKMON_DIRS = "\
 
 CONF_VERSION = "1"
 
-HOSTTOOLS += "docker iptables"
+HOSTTOOLS += "docker iptables newuidmap newgidmap ip ps"
 
 ACCEPT_FSL_EULA = "1"
