@@ -17,6 +17,7 @@ module.exports =
 	name: 'ASUS Tinker Edge T'
 	arch: 'aarch64'
 	state: 'new'
+	community: true
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
