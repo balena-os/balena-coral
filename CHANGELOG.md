@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.79.7+rev3
+## (2021-06-09)
+
+* Mark asus-tinker-edge-t as a community board [Florin Sarbu]
+
 # v2.79.7+rev2
 ## (2021-06-04)
 

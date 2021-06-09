@@ -1,4 +1,17 @@
 - commits:
+    - subject: Mark asus-tinker-edge-t as a community board
+      hash: d1d52f8e00515d407726fd859c3f8471859b4537
+      body: ''
+      footer:
+        Changelog-entry: Mark asus-tinker-edge-t as a community board
+        changelog-entry: Mark asus-tinker-edge-t as a community board
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.79.7+rev3
+  date: 2021-06-09T11:51:28.214Z
+- commits:
     - subject: >-
         Add machine asus-tinker-edge-t for ASUS Tinker Edge T based on Coral Dev
         Board
