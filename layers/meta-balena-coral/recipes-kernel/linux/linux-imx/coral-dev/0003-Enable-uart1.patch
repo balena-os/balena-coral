@@ -1,0 +1,41 @@
+From 9ea7148331c8ed5ae4ef1e26d32f84aeb8249433 Mon Sep 17 00:00:00 2001
+From: yi-hsin_hung <yi-hsin_hung@asus.com>
+Date: Thu, 22 Apr 2021 14:49:37 +0800
+Subject: [PATCH] Enable uart1
+
+Signed-off-by: yi-hsin_hung <yi-hsin_hung@asus.com>
+Change-Id: I4a2f34567842794be9a6a5af28e3cd06bbe1c365
+---
+ arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts | 2 --
+ arch/arm64/boot/dts/freescale/fsl-imx8mq-som.dtsi     | 2 +-
+ 2 files changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts b/arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts
+index ede2047d6f83..17c95818f685 100644
+--- a/arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts
++++ b/arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts
+@@ -200,8 +200,6 @@
+ 				MX8MQ_IOMUXC_SAI5_RXC_GPIO3_IO20		0x19
+ 				MX8MQ_IOMUXC_SAI5_RXD2_GPIO3_IO23		0x19
+ 				MX8MQ_IOMUXC_SAI5_MCLK_GPIO3_IO25		0x19
+-				MX8MQ_IOMUXC_UART1_TXD_GPIO5_IO23		0x19
+-				MX8MQ_IOMUXC_UART1_RXD_GPIO5_IO22		0x19
+ 			>;
+ 		};
+ 
+diff --git a/arch/arm64/boot/dts/freescale/fsl-imx8mq-som.dtsi b/arch/arm64/boot/dts/freescale/fsl-imx8mq-som.dtsi
+index ebf2513549a8..7d788f665020 100755
+--- a/arch/arm64/boot/dts/freescale/fsl-imx8mq-som.dtsi
++++ b/arch/arm64/boot/dts/freescale/fsl-imx8mq-som.dtsi
+@@ -548,7 +548,7 @@
+ 	pinctrl-0 = <&pinctrl_uart1>;
+ 	assigned-clocks = <&clk IMX8MQ_CLK_UART1>;
+ 	assigned-clock-parents = <&clk IMX8MQ_CLK_25M>;
+-	status = "disabled";
++	status = "okay";
+ };
+ 
+ &uart2 { /* BT */
+-- 
+2.25.1
+

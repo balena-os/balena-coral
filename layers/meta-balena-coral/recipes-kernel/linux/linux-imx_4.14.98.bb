@@ -27,6 +27,19 @@ SRC_URI_coral-dev = "\
     file://0002-include-linux-module.h-copy-init-exit-attrs-to-.patch \
 "
 
+SUMMARY_asus-tinker-edge-t = "Linux Kernel provided and supported by ASUS for ASUS Tinker Edge T"
+
+SRCBRANCH_asus-tinker-edge-t = "mendel-day-imx_8m"
+SRCREV_asus-tinker-edge-t = "1d74a04725699109322a97ee02352507dd2f16c1"
+
+SRC_URI_asus-tinker-edge-t = "\
+    git://github.com/TinkerEdgeT/mendel-linux-imx;protocol=https;branch=${SRCBRANCH_asus-tinker-edge-t} \
+    file://defconfig \
+    file://0001-compiler-attributes-add-support-for-copy-gcc-9.patch \
+    file://0002-include-linux-module.h-copy-init-exit-attrs-to-.patch \
+    file://0003-Enable-uart1.patch \
+"
+
 # As we use the 'defconfig' from Mendel OS (Debian) build scripts, we must also
 # replicate the configure step to merge it.
 do_configure_prepend_coral-dev() {
