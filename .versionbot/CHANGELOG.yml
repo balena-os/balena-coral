@@ -1,4 +1,23 @@
 - commits:
+    - subject: >-
+        Add machine asus-tinker-edge-t for ASUS Tinker Edge T based on Coral Dev
+        Board
+      hash: 3491a9f0e479471cf281d6db9bfe4af84f5dc1c4
+      body: ''
+      footer:
+        Changelog-entry: >-
+          Add machine asus-tinker-edge-t for ASUS Tinker Edge T based on Coral
+          Dev Board
+        changelog-entry: >-
+          Add machine asus-tinker-edge-t for ASUS Tinker Edge T based on Coral
+          Dev Board
+        Signed-off-by: Leslie Yu <leslie_yu@asus.com>
+        signed-off-by: Leslie Yu <leslie_yu@asus.com>
+      author: Leslie Yu
+      nested: []
+  version: 2.79.7+rev2
+  date: 2021-06-04T02:52:11.147Z
+- commits:
     - subject: Update meta-balena from v2.72.0 to v2.79.7
       hash: 53e63b113084c242ebeb6d6779c27b453f0107b0
       body: |

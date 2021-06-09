@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.79.7+rev2
+## (2021-06-04)
+
+* Add machine asus-tinker-edge-t for ASUS Tinker Edge T based on Coral Dev Board [Leslie Yu]
+
 # v2.79.7+rev1
 ## (2021-06-02)
 
