@@ -12,9 +12,32 @@ compile_mx8m() {
      cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/${UBOOT_DTB_NAME}   ${BOOT_STAGING}
      cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/u-boot-nodtb.bin    ${BOOT_STAGING}/u-boot-nodtb.bin
      cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/mkimage_uboot       ${BOOT_STAGING}
+     bbnote "Copied mkimage_uboot from ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/ to ${BOOT_STAGING} "
+     echo "<<<<"
+     ls -l ${BOOT_STAGING}
      cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/${ATF_MACHINE_NAME} ${BOOT_STAGING}/bl31.bin
      cp ${DEPLOY_DIR_IMAGE}/${UBOOT_NAME}                     ${BOOT_STAGING}/u-boot.bin
 }
+
+do_compile() {
+    echo ">>>> SOC_FAMILY: ${SOC_FAMILY}, SOC_TARGET: ${SOC_TARGET}, target: ${target}"
+    pwd
+    if [ -f ${BOOT_STAGING}/mkimage_uboot ]; then
+	echo "Found mkimage_uboot in ${BOOT_STAGING}"
+    else
+	echo "mkimage_uboot is not available in ${BOOT_STAGING}"
+    fi;
+    compile_${SOC_FAMILY}
+    # mkimage for i.MX8
+    for target in ${IMXBOOT_TARGETS}; do
+        bbnote "building ${SOC_TARGET} - ${target}"
+        make SOC=${SOC_TARGET} ${target}
+        if [ -e "${BOOT_STAGING}/flash.bin" ]; then
+            cp ${BOOT_STAGING}/flash.bin ${S}/${BOOT_CONFIG_MACHINE}-${target}
+        fi
+    done
+}
+
 
 DEPENDS_append_mx8m = " \
     virtual/bootloader \
