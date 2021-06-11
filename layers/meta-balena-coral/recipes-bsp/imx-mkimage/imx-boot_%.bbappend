@@ -1,3 +1,5 @@
+do_compile[depends] += "virtual/bootloader:do_deploy"
+
 compile_mx8m() {
     bbnote 8MQ/8MM boot binary build
     for ddr_firmware in ${DDR_FIRMWARE_NAME}; do
