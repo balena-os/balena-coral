@@ -32,10 +32,19 @@ do_compile_coral-dev() {
     fi;
 
     compile_${SOC_FAMILY}
+
+    pwd
+    if [ -f ${BOOT_STAGING}/mkimage_uboot ]; then
+        bbnote "After compile_mx8m: Found mkimage_uboot in ${BOOT_STAGING}"
+    else
+        bbnote "After compile_mx8m: mkimage_uboot is not available in ${BOOT_STAGING}"
+    fi;
     # mkimage for i.MX8
     for target in ${IMXBOOT_TARGETS}; do
         bbnote "building ${SOC_TARGET} - ${target} - ${BOARD}"
 	bbnote "Logging improved >>>"
+	pwd
+        ls .
         make SOC=${SOC_TARGET} ${target} BOARD=${BOARD}
         if [ -e "${BOOT_STAGING}/flash.bin" ]; then
             cp ${BOOT_STAGING}/flash.bin ${S}/${BOOT_CONFIG_MACHINE}-${target}
