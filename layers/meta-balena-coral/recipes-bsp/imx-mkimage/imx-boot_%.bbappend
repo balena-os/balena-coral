@@ -19,6 +19,8 @@ compile_mx8m() {
      bbnote "Copied mkimage_uboot from ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/ to ${BOOT_STAGING} "
      echo "<<<<"
      file ${BOOT_STAGING}/mkimage_uboot
+     ls -al /yocto/resin-board/build/tmp/sysroots-uninative/x86_64-linux/lib/ || true
+     ls -al /work/build/tmp/sysroots-uninative/x86_64-linux/lib/ || true
      echo "<<<>>>"
      ls -l ${BOOT_STAGING}
      cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/${ATF_MACHINE_NAME} ${BOOT_STAGING}/bl31.bin
