@@ -1,0 +1,25 @@
+From 9d15b12d483e14e0399841edeb25cd2840f4cf88 Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Fri, 11 Jun 2021 15:53:19 +0200
+Subject: [PATCH] test
+
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ iMX8M/soc.mak | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/iMX8M/soc.mak b/iMX8M/soc.mak
+index 5efb7c5..87f9b85 100644
+--- a/iMX8M/soc.mak
++++ b/iMX8M/soc.mak
+@@ -81,6 +81,7 @@ clean:
+ dtbs = fsl-$(PLAT)-$(BOARD).dtb
+ u-boot.itb: $(dtbs)
+ 	TEE_LOAD_ADDR=$(TEE_LOAD_ADDR) ATF_LOAD_ADDR=$(ATF_LOAD_ADDR) ./mkimage_fit_atf.sh $(dtbs) > u-boot.its
++	pwd
+ 	./mkimage_uboot -E -p 0x3000 -f u-boot.its u-boot.itb
+ 	@rm -f u-boot.its
+ 
+-- 
+2.7.4
+

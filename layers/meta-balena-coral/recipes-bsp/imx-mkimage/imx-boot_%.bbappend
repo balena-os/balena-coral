@@ -1,4 +1,8 @@
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+
 do_compile[depends] += "virtual/bootloader:do_deploy"
+
+SRC_URI_append = " file://0001-test.patch"
 
 compile_mx8m() {
     bbnote 8MQ/8MM boot binary build
