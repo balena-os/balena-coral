@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.14.3
+      hash: 83350c9b29f90169b4750012c4a4fd19c2135d67
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.14.3
+        changelog-entry: Update balena-yocto-scripts to v1.14.3
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.79.7+rev4
+  date: 2021-06-12T16:13:27.968Z
+- commits:
     - subject: Mark asus-tinker-edge-t as a community board
       hash: d1d52f8e00515d407726fd859c3f8471859b4537
       body: ''
