@@ -1,6 +1,28 @@
 Change log
 -----------
 
+# v2.80.5+rev1
+## (2021-06-21)
+
+
+<details>
+<summary> Update meta-balena from v2.80.3 to v2.80.5 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.80.5
+> ### (2021-06-17)
+> 
+> * update-balena-supervisor: Improve obtaining the supervisor directory name [Alexandru Costache]
+> * Update balena-supervisor from v12.7.0 to v12.8.7 [Miguel Casqueira]
+> 
+> ## meta-balena-2.80.4
+> ### (2021-06-14)
+> 
+> * kernel-headers-test: simplify example module Makefile [Joseph Kogut]
+> 
+</details>
+
+* Update balena-yocto-scripts to v1.14.6 [Florin Sarbu]
+
 # v2.80.3+rev1
 ## (2021-06-12)
 
