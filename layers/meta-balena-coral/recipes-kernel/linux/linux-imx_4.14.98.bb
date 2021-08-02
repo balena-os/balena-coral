@@ -38,6 +38,13 @@ SRC_URI_asus-tinker-edge-t = "\
     file://0001-compiler-attributes-add-support-for-copy-gcc-9.patch \
     file://0002-include-linux-module.h-copy-init-exit-attrs-to-.patch \
     file://0003-Enable-uart1.patch \
+    file://0004-Add-v4l2loopback-kernel-module.patch \
+"
+
+BALENA_CONFIGS_append_asus-tinker-edge-t = " v4l2loopback"
+
+BALENA_CONFIGS[v4l2loopback] = " \
+    CONFIG_V4L2_LOOPBACK=m \
 "
 
 # As we use the 'defconfig' from Mendel OS (Debian) build scripts, we must also
