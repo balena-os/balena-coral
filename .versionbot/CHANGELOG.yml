@@ -1,4 +1,19 @@
 - commits:
+    - subject: Support v4l2loopback kernel module for machine asus-tinker-edge-t
+      hash: 6abc4d7e8761fb6bc249bf2df558c3c13da5a042
+      body: |
+        This is from the following.
+        https://github.com/umlaeute/v4l2loopback
+      footer:
+        Changelog-entry: Support v4l2loopback kernel module for machine asus-tinker-edge-t
+        changelog-entry: Support v4l2loopback kernel module for machine asus-tinker-edge-t
+        Signed-off-by: Leslie Yu <leslie_yu@asus.com>
+        signed-off-by: Leslie Yu <leslie_yu@asus.com>
+      author: Leslie Yu
+      nested: []
+  version: 2.80.5+rev3
+  date: 2021-08-03T06:01:07.940Z
+- commits:
     - subject: Add balena-yocto-scripts upstream source
       hash: 8889e3d24dc75660b3cff72e2bb0dbeffd1f8593
       body: >

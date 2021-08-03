@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.80.5+rev3
+## (2021-08-03)
+
+* Support v4l2loopback kernel module for machine asus-tinker-edge-t [Leslie Yu]
+
 # v2.80.5+rev2
 ## (2021-06-22)
 
