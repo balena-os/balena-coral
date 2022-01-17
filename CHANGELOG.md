@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v2.82.10+rev5
+## (2022-01-17)
+
+
+<details>
+<summary> Update balena-yocto-scripts to v1.16.2 [Alex Gonzalez] </summary>
+
+> ## balena-yocto-scripts-1.16.2
+> ### (2022-01-15)
+> 
+> * balena-api: Propagate balena API environment, token and OS organization [Alex Gonzalez]
+> * balena-build.sh: Propagate balena API environment and token [Alex Gonzalez]
+> * prepare-and-start: Propagate balena API environment and token [Alex Gonzalez]
+> 
+</details>
+
 # v2.82.10+rev4
 ## (2022-01-12)
 
