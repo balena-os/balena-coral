@@ -1,0 +1,60 @@
+From 2b2dbf4732e61b84057858e3f2ff14c90604751c Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Wed, 8 Jul 2020 14:25:26 +0200
+Subject: [PATCH] reset2
+
+---
+ .../boot/dts/freescale/fsl-imx8mq-phanbell.dts   | 16 ++++++++++++++--
+ arch/arm64/boot/dts/freescale/fsl-imx8mq.dtsi    |  2 ++
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts b/arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts
+index 8896a166d56b..662f8d9cfea0 100644
+--- a/arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts
++++ b/arch/arm64/boot/dts/freescale/fsl-imx8mq-phanbell.dts
+@@ -70,6 +70,19 @@
+ 		google,model = "edgetpu-audio-card";
+ 		status = "okay";
+ 	};
++
++        gpio-keys {
++                compatible = "gpio-keys";
++                pinctrl-names = "default";
++                pinctrl-0 = <&pinctrl_gpio>;
++                wakeup{
++                        label = "wakeup gpio";
++                        gpios = <&gpio3 13 GPIO_ACTIVE_LOW>;
++                        linux,code = <KEY_WAKEUP>;
++			wakeup-source;
++                };
++        };
++
+ };
+ 
+ &iomuxc {
+@@ -332,8 +345,7 @@
+ 	port {
+ 		csi1_ep: endpoint {
+ 			remote-endpoint = <&csi1_mipi_ep>;
+-		};
+-	};
++		}; };
+ };
+ 
+ &mipi_csi_1 {
+diff --git a/arch/arm64/boot/dts/freescale/fsl-imx8mq.dtsi b/arch/arm64/boot/dts/freescale/fsl-imx8mq.dtsi
+index b560bec57402..b324ce20ed99 100755
+--- a/arch/arm64/boot/dts/freescale/fsl-imx8mq.dtsi
++++ b/arch/arm64/boot/dts/freescale/fsl-imx8mq.dtsi
+@@ -338,6 +338,8 @@
+ 		#gpio-cells = <2>;
+ 		interrupt-controller;
+ 		#interrupt-cells = <2>;
++                pad-wakeup-num = <1>;
++                pad-wakeup = <160 4 13>;
+ 	};
+ 
+ 	gpio4: gpio@30230000 {
+-- 
+2.17.1
+
