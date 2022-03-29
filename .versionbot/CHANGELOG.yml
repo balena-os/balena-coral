@@ -1,4 +1,30 @@
 - commits:
+    - subject: Specify full path in repo.yml upstreams
+      hash: 8394d33b8720b2aebfdb350d4cd27049ce872785
+      body: |
+        This is required so that versionist can automatically include nested
+        changelogs from renovate PRs.
+      footer:
+        Changelog-entry: Specify full path in repo.yml upstreams
+        changelog-entry: Specify full path in repo.yml upstreams
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Add renovate configuration
+      hash: daba74ed5d05ced56ed6d691f051bdebbd8816f3
+      body: ""
+      footer:
+        Changelog-entry: Add renovate configuration
+        changelog-entry: Add renovate configuration
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.95.3+rev1
+  title: "'alexgg/renovate'"
+  date: 2022-03-29T16:27:58.550Z
+- commits:
     - subject: Update meta-balena from v2.82.10 to v2.95.3
       hash: 14a5c36dad2392c26529d3d4f90ce45031c563b9
       body: |

@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.95.3+rev1
+## (2022-03-29)
+
+* Specify full path in repo.yml upstreams [Alex Gonzalez]
+* Add renovate configuration [Alex Gonzalez]
+
 # v2.95.3
 ## (2022-03-18)
 
