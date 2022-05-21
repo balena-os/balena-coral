@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.95.3+rev2
+## (2022-05-21)
+
+* Add contracts submodule [Alex Gonzalez]
+
 # v2.95.3+rev1
 ## (2022-03-29)
 
