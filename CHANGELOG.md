@@ -1,6 +1,46 @@
 Change log
 -----------
 
+# v2.98.32
+## (2022-05-27)
+
+
+<details>
+<summary> Update layers/meta-balena to cc2bc321c33d9c2af1f4566793e16b075e425a7c [Renovate Bot] </summary>
+
+> ## meta-balena-2.98.32
+> ### (2022-05-27)
+> 
+> * supervisor: Update balena-supervisor to v13.1.11 [Felipe Lalanne]
+> 
+> ## meta-balena-2.98.31
+> ### (2022-05-26)
+> 
+> * tests: os: config-json: fix race by waiting for InvocationID change [Joseph Kogut]
+> * tests: os: reformat config-json tests [Joseph Kogut]
+> 
+> ## meta-balena-2.98.30
+> ### (2022-05-24)
+> 
+> * Remove localMode setting from standalone image configuration [Alex Gonzalez]
+> 
+> ## meta-balena-2.98.29
+> ### (2022-05-23)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.17 [Leandro Motta Barros] </summary>
+> 
+>> ### balena-engine-20.10.17
+>> #### (2022-05-17)
+>> 
+>> * Fix "slice bounds out of range" while applying deltas [Leandro Motta Barros]
+>> 
+> </details>
+> 
+> 
+</details>
+
 # v2.98.28+rev1
 ## (2022-05-27)
 

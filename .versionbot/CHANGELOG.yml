@@ -1,4 +1,151 @@
 - commits:
+    - subject: Update layers/meta-balena to cc2bc321c33d9c2af1f4566793e16b075e425a7c
+      hash: fde198ae83db28491cf30f34f32963f5a79fca9d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to cc2bc321c33d9c2af1f4566793e16b075e425a7c
+        changelog-entry: Update layers/meta-balena to cc2bc321c33d9c2af1f4566793e16b075e425a7c
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "supervisor: Update balena-supervisor to v13.1.11"
+              hash: 1f1266bd0893b963528e88dfd7fd08f232088cb9
+              body: ""
+              footer:
+                Relates-to: https://github.com/balena-os/balena-supervisor/pull/1944
+                relates-to: https://github.com/balena-os/balena-supervisor/pull/1944
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Felipe Lalanne <felipe@balena.io>
+                signed-off-by: Felipe Lalanne <felipe@balena.io>
+              author: Felipe Lalanne
+              nested: []
+          version: meta-balena-2.98.32
+          title: "'supervisor: Update balena-supervisor to v13.1.11'"
+          date: 2022-05-27T15:22:00.185Z
+        - commits:
+            - subject: "tests: os: config-json: fix race by waiting for InvocationID change"
+              hash: a8303039013b6252680eb48a139e46a358506949
+              body: >
+                When tests execute quicker, a race condition can occur where
+                config.json
+
+                is edited to remove the dnsServers property, but /run/dnsmasq.servers is
+
+                not changed yet. This causes the test to fail, as the file is not empty.
+
+                    not ok 1 - We should have an empty /run/dnsmasq.servers file.
+                      ---
+                      found: |-
+                	server=1.1.1.1
+                	server=1.1.1.1
+                      pattern: !re /^\s?$/
+                      diff: |
+                	--- expected
+                	+++ actual
+                	-/^\s?$/
+                	+"server=1.1.1.1\nserver=1.1.1.1"
+
+                Fix this by waiting until the InvocationID of dnsmasq.service changes.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "tests: os: reformat config-json tests"
+              hash: 440b799974eaf237664db1813d1ebc0bff3a46b9
+              body: >
+                Reformat config-json tests w/ await where variables aren't
+                passed to
+
+                chained promises.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.98.31
+          title: "'Fix config json race'"
+          date: 2022-05-26T17:59:23.238Z
+        - commits:
+            - subject: Remove localMode setting from standalone image configuration
+              hash: 26aa3caf4e4d649d323e57c21f818ca83a9b9b13
+              body: >
+                The `localMode` variable in `config.json` is not longer used and
+                it can
+
+                be removed
+
+
+                Fixes #2041
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Remove localMode setting from standalone image configuration
+                changelog-entry: Remove localMode setting from standalone image configuration
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.98.30
+          title: "'image-balena: Remove localMode from standalone image configuration'"
+          date: 2022-05-24T10:09:17.695Z
+        - commits:
+            - subject: Update balena-engine to v20.10.17
+              hash: 8a7b24d38f67749b5d979ce12a0fafe5626190bb
+              body: |
+                Update balena-engine from 20.10.16 to 20.10.17
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                Changelog-entry: Update balena-engine to v20.10.17
+                changelog-entry: Update balena-engine to v20.10.17
+              author: Leandro Motta Barros
+              nested:
+                - commits:
+                    - subject: Fix "slice bounds out of range" while applying deltas
+                      hash: 6f12d0abb3e438f26a18eee9bbaeca9c4702f7e7
+                      body: >
+                        The root cause of this issue was an integer overflow in
+                        32-bit platforms
+
+                        -- specifically, when explicitly converting `io.Reader` offsets
+
+                        (`int64`) to slice indices (`int`, which is only 32-bit long on 32-bit
+
+                        platforms).
+
+
+                        We already had in place the checks supposed to ensure slice bounds where
+
+                        always within the expected bounds. So, in a way, this commit just
+
+                        re-organizes the code so that we perform safely this required `int64` to
+
+                        `int` type conversion.
+                      footer:
+                        Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        Change-type: patch
+                        change-type: patch
+                      author: Leandro Motta Barros
+                      nested: []
+                  version: balena-engine-20.10.17
+                  title: "'Lmb/fix oob slice'"
+                  date: 2022-05-17T20:01:47.266Z
+          version: meta-balena-2.98.29
+          title: "'balena-engine: Update to 20.10.17'"
+          date: 2022-05-23T17:18:04.355Z
+  version: 2.98.32
+  title: "'Update layers/meta-balena digest to cc2bc32'"
+  date: 2022-05-27T18:08:52.894Z
+- commits:
     - subject: Update contracts to 35dea15031cf273d469171f81ed24c394332caf5
       hash: e306b2b65d7c71c78579bc0323b625123e432444
       body: Update contracts
