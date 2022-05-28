@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update layers/meta-balena to 95c96e0624507fd9701912c67d3ae5ec5dbdf6f9
+      hash: 4039d51538b618eec1b8de396fe628bbee80f310
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 95c96e0624507fd9701912c67d3ae5ec5dbdf6f9
+        changelog-entry: Update layers/meta-balena to 95c96e0624507fd9701912c67d3ae5ec5dbdf6f9
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 95649fb
+              hash: 4216f127f4935cb6e0adeccaf7c20daec55fcff7
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: "workers: qemu: fix vars path for x86_64"
+                      hash: b34b92dde6b9b55e9e8393f61787de6895a6e339
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Joseph Kogut <joseph@balena.io>
+                        signed-off-by: Joseph Kogut <joseph@balena.io>
+                      author: Joseph Kogut
+                      nested: []
+                  version: leviathan-2.3.5
+                  title: "'workers: qemu: fix vars path for x86_64'"
+                  date: 2022-05-25T21:12:24.421Z
+          version: meta-balena-2.98.33
+          title: "'Update tests/leviathan digest to 95649fb'"
+          date: 2022-05-27T20:39:54.151Z
+  version: 2.98.33
+  title: "'Update layers/meta-balena digest to 95c96e0'"
+  date: 2022-05-28T16:57:48.326Z
+- commits:
     - subject: Update balena-yocto-scripts to 7b2a89987f196ec4261d240a88c1790c55b366b0
       hash: 5bd965c5c24c2169c745734fd89b9123ad037ffe
       body: Update balena-yocto-scripts
