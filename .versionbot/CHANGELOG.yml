@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update contracts to 1733467586d1af917c169806986179fdf039336e
+      hash: 2beaa8ec5986d85bc4349e46f85495b5385d9c6f
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 1733467586d1af917c169806986179fdf039336e
+        changelog-entry: Update contracts to 1733467586d1af917c169806986179fdf039336e
+      author: Renovate Bot
+      nested: []
+  version: 2.98.33+rev4
+  title: "'Update contracts digest to 1733467'"
+  date: 2022-06-13T21:40:07.382Z
+- commits:
     - subject: Add build and deploy workflow
       hash: fcb0a2337ab271aff9c3906a9edd48956bee30dd
       body: >
