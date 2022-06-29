@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 681f0437ba0ede9c310c9c22adf16daad0a29abb
+      hash: 5c324618f0693f3d8641f7302c970b939510b74c
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 681f0437ba0ede9c310c9c22adf16daad0a29abb
+        changelog-entry: Update balena-yocto-scripts to 681f0437ba0ede9c310c9c22adf16daad0a29abb
+      author: renovate[bot]
+      nested: []
+  version: 2.98.33+rev5
+  title: "'Update balena-yocto-scripts digest to 681f043'"
+  date: 2022-06-28T23:22:00.184Z
+- commits:
     - subject: Update contracts to 1733467586d1af917c169806986179fdf039336e
       hash: 2beaa8ec5986d85bc4349e46f85495b5385d9c6f
       body: Update contracts
