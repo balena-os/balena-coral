@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.98.33+rev7
+## (2022-07-12)
+
+* Update build and deploy workflow to support ESR tags [Alex Gonzalez]
+
 # v2.98.33+rev6
 ## (2022-06-29)
 
