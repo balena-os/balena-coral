@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v2.98.33+rev8
+## (2022-07-27)
+
+
+<details>
+<summary> Update contracts to 9db49d2fbb34542f53bf496135c32cccf5df487c [renovate[bot]] </summary>
+
+> ## contracts-2.0.7
+> ### (2022-07-19)
+> 
+> * hw.device-type: fix tdpzu9 device name [Francois]
+> 
+</details>
+
+
+<details>
+<summary> Update contracts to 4df6bf241e40b34e4d7051c97ba4f9cf1945c45f [renovate[bot]] </summary>
+
+> ## contracts-2.0.7
+> ### (2022-07-19)
+> 
+> * hw.device-type: fix tdpzu9 device name [Francois]
+> 
+</details>
+
 # v2.98.33+rev7
 ## (2022-07-12)
 
