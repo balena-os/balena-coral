@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v2.101.1
+## (2022-08-04)
+
+* Remove final argument from build and deploy workflow [Alex Gonzalez]
+* Update build and deploy workflow to v0.0.9 [Alex Gonzalez]
+* Update layers/meta-balena to 7a62296718a363abd393107933f30e611ec27d1e [renovate[bot]]
+
 # v2.101.0
 ## (2022-08-03)
 
