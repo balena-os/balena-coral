@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update layers/meta-balena to 3c505918b2cbf72f607a3ccc65cc3853fd3a636e
+      hash: 8065377139d4f6529d2f4bfa7aebb1f4a3742c53
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 3c505918b2cbf72f607a3ccc65cc3853fd3a636e
+        changelog-entry: Update layers/meta-balena to 3c505918b2cbf72f607a3ccc65cc3853fd3a636e
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: DRY the HUP smoke tests
+              hash: 46dc350d829c352dae62a87eb1aec21e69789503
+              body: >
+                Our tests perform two HUPs (into and out of the release under
+                test), and
+
+                the code for both of these HUPs were duplicated. This commit factors
+
+                this code out to a common function.
+              footer:
+                Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                Change-type: patch
+                change-type: patch
+              author: Leandro Motta Barros
+              nested: []
+            - subject: Check volume contents over HUPs
+              hash: ef4e861fdd1dd7ea8d3a9b6dd34a0e1e30c8e852
+              body: >
+                This is a small improvement over our previous test: in addition
+                to
+
+                checking that the volumes themselves are preserved over HUPs, we now
+
+                check if the contents of these volumes is preserved.
+
+
+                Resolves #2428
+              footer:
+                Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                Change-type: patch
+                change-type: patch
+              author: Leandro Motta Barros
+              nested: []
+          version: meta-balena-2.101.2
+          title: "'Check volume contents over HUPs'"
+          date: 2022-08-05T13:32:38.536Z
+  version: 2.101.2
+  title: "'Update layers/meta-balena digest to 3c50591'"
+  date: 2022-08-05T17:07:02.102Z
+- commits:
     - subject: Update contracts to 0ea2e84200069a472d371f3c9c20952a2e61b92f
       hash: 2c46e454a44b9640009ee553c24637abaafcbb63
       body: Update contracts
