@@ -13,9 +13,9 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-openembedded/meta-networking \
     ${TOPDIR}/../layers/meta-openembedded/meta-python \
     ${TOPDIR}/../layers/meta-freescale \
-    ${TOPDIR}/../layers/meta-balena-coral \
     ${TOPDIR}/../layers/meta-coral \
+    ${TOPDIR}/../layers/meta-balena-coral \
     ${TOPDIR}/../layers/meta-balena/meta-balena-common \
-    ${TOPDIR}/../layers/meta-balena/meta-balena-warrior \
+    ${TOPDIR}/../layers/meta-balena/meta-balena-dunfell \
     ${TOPDIR}/../layers/meta-rust \
 "

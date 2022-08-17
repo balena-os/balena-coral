@@ -10,7 +10,7 @@ FILESEXTRAPATHS_prepend_coral-dev := "${THISDIR}/${PN}:"
 
 # Let's grab the essential and merge upstream linux-imx-4.14.98 recipe
 # into this one, to turn it into a complete recipe.
-require recipes-kernel/linux/linux-imx.inc
+require linux-imx.inc
 DEPENDS += "lzop-native bc-native"
 DEFAULT_PREFERENCE = "1"
 COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
