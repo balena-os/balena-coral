@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.101.7+rev1
+## (2022-08-22)
+
+* Modify layer ordering [Alex Gonzalez]
+* Update contracts to 39a79c43f1b8ab4426d7a9c1cdeb9a9514101061 [renovate[bot]]
+
 # v2.101.7
 ## (2022-08-17)
 
