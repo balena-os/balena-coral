@@ -1,4 +1,92 @@
 - commits:
+    - subject: Update layers/meta-balena to 433b72275aa61da736904aa3f55c7b987824d523
+      hash: d477f104834740256e81a7a9b2d089d287f0f361
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 433b72275aa61da736904aa3f55c7b987824d523
+        changelog-entry: Update layers/meta-balena to 433b72275aa61da736904aa3f55c7b987824d523
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.2.10
+              hash: e6a6abbb3994937bbb5e5d2e1479e97a76faec88
+              body: Update balena-supervisor
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.105.11
+          title: ""
+          date: 2022-10-13T20:48:28.279Z
+        - commits:
+            - subject: "classes: kernel-balena: improve aufs branch selection"
+              hash: 83f866691184df43c5b08b9da646a5bf99227b7b
+              body: >
+                The task that applies the aufs patches is still required to support
+
+                hostOS updates between aufs and overlay2 balenaOS versions.
+
+
+                This commit adds support for 5.15 kernels and improves the branch
+
+                selection logic to cover some corner cases.
+
+
+                It also adds a test task so that we can test regressions.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.10
+          title: ""
+          date: 2022-10-12T13:48:37.596Z
+        - commits:
+            - subject: "meta-balena-rust: Fix ABI for arm"
+              hash: efe707f06134a345ef4d6f396555b4c3e057f23d
+              body: >
+                The move to include the ABI in the target definition was done in Poky:
+
+                d6b563710e6cc0857843433d85023d47f9f2037d
+
+
+                Without much explanation in the commit, the ABI was removed in Poky:
+
+                e4c16d11128f0e9cc2567fc9e3579e9a94988b2e
+
+
+                Only to be re-introduced, also without much explanation in Poky:
+
+                0bf2fd16273436f1cd9ea2ab99ad882e879f965d
+
+
+                Then, there was a partial revert to remove the ABI again in Poky:
+
+                66ff1fb3a164fa794ee186960809e3fa9e938b48
+
+
+                This last 66ff1fb3a164fa794ee186960809e3fa9e938b48 commit is reverted here as
+
+                it fails to build for ARM targets. All our boards that cover all the
+
+                possible ABIs build with this change.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.9
+          title: ""
+          date: 2022-10-11T21:36:12.907Z
+  version: 2.105.11
+  title: ""
+  date: 2022-10-14T22:39:45.600Z
+- commits:
     - subject: Switch from balenaCI to flowzone
       hash: cba8333b4b5e42608dc52ae4cdba369cfd3f567d
       body: ""
