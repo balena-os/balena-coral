@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v2.107.14
+## (2022-12-01)
+
+
+<details>
+<summary> Update contracts to 5d83fa7ad3a0c95db49ee465c9a77845611f3a3b [renovate[bot]] </summary>
+
+> ## contracts-2.0.29
+> ### (Invalid date)
+> 
+> * Add node v19.2.0 [Trong Nghia Nguyen]
+> 
+</details>
+
+* Update layers/meta-balena to 8ea20f929eeb3f52b23874c3bd951c961329ad29 [renovate[bot]]
+
 # v2.107.12
 ## (2022-11-28)
 
