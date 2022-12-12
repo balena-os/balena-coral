@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 2ad93348592235ec26760b9f4e3f8b21f0d1d03f
+      hash: d4699db078e17d124e87b2ad851ffcc50c76b77e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 2ad93348592235ec26760b9f4e3f8b21f0d1d03f
+        changelog-entry: Update layers/meta-balena to 2ad93348592235ec26760b9f4e3f8b21f0d1d03f
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "chrony: disable reverse dns lookups in healthcheck"
+              hash: aa303afe9e3528023e6986bf5ceccc8bf8b5433f
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ken Bannister <kb2ma@runbox.com>
+                signed-off-by: Ken Bannister <kb2ma@runbox.com>
+              author: Ken Bannister
+              nested: []
+          version: meta-balena-2.107.27
+          title: ""
+          date: 2022-12-12T13:55:20.224Z
+  version: 2.107.27
+  title: ""
+  date: 2022-12-12T16:56:57.300Z
+- commits:
     - subject: Update layers/meta-balena to d5e33e207a60caaf8fe6b83326cad8b6e94a47e5
       hash: b2be618d41ac457bbdd084bb842b3641ec432faf
       body: Update layers/meta-balena
