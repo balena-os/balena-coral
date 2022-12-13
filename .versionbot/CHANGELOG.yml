@@ -1,4 +1,44 @@
 - commits:
+    - subject: Update layers/meta-balena to 654c0b9b5b019196e10b348471a50bc7e2e614a8
+      hash: 093cfacf8819c14f24cf042fd0b5037d87417475
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 654c0b9b5b019196e10b348471a50bc7e2e614a8
+        changelog-entry: Update layers/meta-balena to 654c0b9b5b019196e10b348471a50bc7e2e614a8
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "extra-udev-rules: Update teensy.rules"
+              hash: 9d10e815e773e47f86decaac1358490c5f0959c7
+              body: |
+                Updated rules from https://www.pjrc.com/teensy/00-teensy.rules
+
+                Fixes #2247
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "extra-udev-rules: Rename recipe"
+              hash: dcc6f5c793982c04a9ca0235d6542334cbbf5431
+              body: |
+                Remove the resin prefix.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.107.30
+          title: ""
+          date: 2022-12-13T14:16:24.113Z
+  version: 2.107.30
+  title: ""
+  date: 2022-12-13T17:00:42.366Z
+- commits:
     - subject: Update layers/meta-balena to 79367a045b9e8d483e3d330b70d43cadc5462f78
       hash: 1c8a716d6f5717304a504e4efde1ca18e6aba083
       body: Update layers/meta-balena
