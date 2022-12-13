@@ -1,4 +1,61 @@
 - commits:
+    - subject: Update layers/meta-balena to 79367a045b9e8d483e3d330b70d43cadc5462f78
+      hash: 1c8a716d6f5717304a504e4efde1ca18e6aba083
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 79367a045b9e8d483e3d330b70d43cadc5462f78
+        changelog-entry: Update layers/meta-balena to 79367a045b9e8d483e3d330b70d43cadc5462f78
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-image-initramfs: disable redundant compression"
+              hash: 91213a65ab83794be274757c8598c4c3495ceece
+              body: >
+                Our initramfs is built into the kernel, which is always compressed.
+
+                Disable redundant initramfs compression, which should save some CPU
+
+                cycles during build and boot, as well as improving compression ratio.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.107.29
+          title: ""
+          date: 2022-12-13T07:13:16.319Z
+        - commits:
+            - subject: "initrdscripts: Only unlock LUKS partitions on the OS drive"
+              hash: f5e8488e7b87c38829d241f788413433526d2f78
+              body: >
+                In the current state the cryptsetup initrd script tries to unlock all
+
+                LUKS volumes in the system using the TPM. This includes user-defined LUKS
+
+                volumes that, if present, fail to unlock and make the system unbootable.
+
+                We should also not touch user-defined volumes in the first place.
+
+
+                This patch modifies the cryptsetup script to only unlock LUKS volumes
+
+                that are on the OS drive (same block device as the EFI partition).
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.107.28
+          title: ""
+          date: 2022-12-12T21:10:45.792Z
+  version: 2.107.29
+  title: ""
+  date: 2022-12-13T09:59:06.777Z
+- commits:
     - subject: Update layers/meta-balena to 2ad93348592235ec26760b9f4e3f8b21f0d1d03f
       hash: d4699db078e17d124e87b2ad851ffcc50c76b77e
       body: Update layers/meta-balena

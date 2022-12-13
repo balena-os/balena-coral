@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v2.107.29
+## (2022-12-13)
+
+
+<details>
+<summary> Update layers/meta-balena to 79367a045b9e8d483e3d330b70d43cadc5462f78 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.29
+> ### (2022-12-13)
+> 
+> * balena-image-initramfs: disable redundant compression [Joseph Kogut]
+> 
+> ## meta-balena-2.107.28
+> ### (2022-12-12)
+> 
+> * initrdscripts: Only unlock LUKS partitions on the OS drive [Michal Toman]
+> 
+
+</details>
+
 # v2.107.27
 ## (2022-12-12)
 
