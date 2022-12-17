@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v2.108.0
+## (2022-12-17)
+
+
+<details>
+<summary> Update layers/meta-balena to 1b3b0a273b8aeb2ac69805253657c7ec2ec670b4 [renovate[bot]] </summary>
+
+> ## meta-balena-2.108.0
+> ### (2022-12-16)
+> 
+> * Update NetworkManager to 1.40.4 [Zahari Petkov]
+> 
+> ## meta-balena-2.107.40
+> ### (2022-12-16)
+> 
+> * Add upstream resolvconf 1.91 recipe for kirkstone [Zahari Petkov]
+> 
+
+</details>
+
 # v2.107.39+rev2
 ## (2022-12-16)
 

@@ -1,4 +1,86 @@
 - commits:
+    - subject: Update layers/meta-balena to 1b3b0a273b8aeb2ac69805253657c7ec2ec670b4
+      hash: ff1d470d93d8bdbccdfc4ae33dd840f3c37bb6e4
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 1b3b0a273b8aeb2ac69805253657c7ec2ec670b4
+        changelog-entry: Update layers/meta-balena to 1b3b0a273b8aeb2ac69805253657c7ec2ec670b4
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update NetworkManager to 1.40.4
+              hash: aeab6a6b030bd6d0047a92dcc8d41fd9e542ffe7
+              body: >
+                Main NetworkManager recipe was migrated to match latest one from
+
+                meta-openembedded, so that all improvements are merged now.
+
+
+                Excluded from it are `iwd` and `dhcpcd` daemon configurations that are
+
+                not used by us.
+
+
+                Default NM firewall in meta-openembedded is `nftables` where we are still
+
+                using `iptables`.
+
+
+                The new recipe relies on `meson` as a build system now.
+
+
+                The .bbapend file that contains modifications specific to balena is preserved.
+
+                Only `balena-client-id.patch` is removed as it references code that no longer
+
+                exists. This is because the internal systemd DHCPv4 client code that NM used
+
+                is now replaced by nettools' n-dhcp4 implementation.
+
+
+                Closes #2872
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update NetworkManager to 1.40.4
+                changelog-entry: Update NetworkManager to 1.40.4
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-2.108.0
+          title: ""
+          date: 2022-12-16T21:10:35.840Z
+        - commits:
+            - subject: Add upstream resolvconf 1.91 recipe for kirkstone
+              hash: af89ddb51d7829dc045cd3434fb4cf0bec7fba37
+              body: >
+                Current resolvconf version is broken for kirkstone, which is fixed
+                upstream,
+
+                so we reuse the fixed version from upstream.
+
+
+                The symptom is that DNS servers provided by DHCP are not being used.
+
+
+                Closes #2907
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Add upstream resolvconf 1.91 recipe for kirkstone
+                changelog-entry: Add upstream resolvconf 1.91 recipe for kirkstone
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-2.107.40
+          title: ""
+          date: 2022-12-16T16:09:54.407Z
+  version: 2.108.0
+  title: ""
+  date: 2022-12-17T01:11:44.780Z
+- commits:
     - subject: Update contracts to b6bdc537c9f9d224301152a0291682172320bf6a
       hash: 556826e8ca99cc716da2bc454041642e3937fbd8
       body: Update contracts
