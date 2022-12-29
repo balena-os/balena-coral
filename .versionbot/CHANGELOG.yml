@@ -1,4 +1,78 @@
 - commits:
+    - subject: Update layers/meta-balena to 95d8b0c5bfb36a164081f417b52c8de16f2dc474
+      hash: 32119aa10d825d844a2208f5239f4b0325266191
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 95d8b0c5bfb36a164081f417b52c8de16f2dc474
+        changelog-entry: Update layers/meta-balena to 95d8b0c5bfb36a164081f417b52c8de16f2dc474
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 1dcb432
+              hash: 830ab691c31d4e1ff3bacba743b43ee1c04235f3
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested:
+                - commits:
+                    - subject: "chore(deps): update dependency eslint-config-prettier to 8.5.0"
+                      hash: af17a52befb96751ed412770397be99609e02273
+                      body: |
+                        Update eslint-config-prettier to 8.5.0
+
+                        Update eslint-config-prettier from 4.3.0 to 8.5.0
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: renovate[bot]
+                      nested: []
+                  version: leviathan-2.11.8
+                  title: ""
+                  date: 2022-12-28T23:03:27.783Z
+          version: meta-balena-2.108.9
+          title: ""
+          date: 2022-12-29T03:03:57.328Z
+    - subject: Update layers/meta-balena to e45cf66e8d8f7145127614153a2694c9a9850ed7
+      hash: 89a9a10e85b8d407466853994574a12b01963131
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e45cf66e8d8f7145127614153a2694c9a9850ed7
+        changelog-entry: Update layers/meta-balena to e45cf66e8d8f7145127614153a2694c9a9850ed7
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 1dcb432
+              hash: 830ab691c31d4e1ff3bacba743b43ee1c04235f3
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested:
+                - commits:
+                    - subject: "chore(deps): update dependency eslint-config-prettier to 8.5.0"
+                      hash: af17a52befb96751ed412770397be99609e02273
+                      body: |
+                        Update eslint-config-prettier to 8.5.0
+
+                        Update eslint-config-prettier from 4.3.0 to 8.5.0
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: renovate[bot]
+                      nested: []
+                  version: leviathan-2.11.8
+                  title: ""
+                  date: 2022-12-28T23:03:27.783Z
+          version: meta-balena-2.108.9
+          title: ""
+          date: 2022-12-29T03:03:57.328Z
+  version: 2.108.9
+  title: ""
+  date: 2022-12-29T05:59:52.235Z
+- commits:
     - subject: Update layers/meta-balena to 68ec8ca1388c8e442acf1235dc573aeb12ff385a
       hash: bbfbe3ddea41869c26fa7d95b355623a260f82ec
       body: Update layers/meta-balena
