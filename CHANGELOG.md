@@ -1,6 +1,33 @@
 Change log
 -----------
 
+# v2.108.14
+## (2023-01-04)
+
+
+<details>
+<summary> Update layers/meta-balena to 91b8ee4980b559c90ae3330bf8ebe1c526b26728 [renovate[bot]] </summary>
+
+> ## meta-balena-2.108.14
+> ### (2023-01-04)
+> 
+> * tests: os: chrony: disable NTP w/ dnsmasq dbus API [Joseph Kogut]
+> 
+
+</details>
+
+
+<details>
+<summary> Update layers/meta-balena to 7aaa2abec902574d9e777a88464eda5be2810666 [renovate[bot]] </summary>
+
+> ## meta-balena-2.108.14
+> ### (2023-01-04)
+> 
+> * tests: os: chrony: disable NTP w/ dnsmasq dbus API [Joseph Kogut]
+> 
+
+</details>
+
 # v2.108.12
 ## (2023-01-04)
 
