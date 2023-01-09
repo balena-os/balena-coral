@@ -1,6 +1,23 @@
 Change log
 -----------
 
+# v2.108.15+rev2
+## (2023-01-09)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 56bb055d91481023a6b6cff92d61ebfffa884139 [renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.19.18
+> ### (2023-01-09)
+> 
+> * balena-generate-ami: Enable TPM support on x86_64 only [Michal Toman]
+> 
+
+</details>
+
+* Update contracts to cbc450a40296e716e50344b3d625fb9a9b6975f6 [renovate[bot]]
+
 # v2.108.15+rev1
 ## (2023-01-07)
 
