@@ -17,8 +17,8 @@ COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 SUMMARY_coral-dev = "Linux Kernel provided and supported by Google for Coral Dev Board"
 
-SRCBRANCH_coral-dev = "release-day"
-SRCREV_coral-dev = "f19426310e2e0ff490a3160a64a05018d7f6c536"
+SRCBRANCH_coral-dev = "master"
+SRCREV_coral-dev = "c13f50afd3920f718f9becc9f47c31fccba00bf7"
 
 SRC_URI_coral-dev = "\
     git://coral.googlesource.com/linux-imx;protocol=https;branch=${SRCBRANCH} \
