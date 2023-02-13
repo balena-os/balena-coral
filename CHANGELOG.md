@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.108.19+rev6
+## (2023-02-13)
+
+* Flowzone: Allow external contributions [Kyle Harding]
+
 # v2.108.19+rev5
 ## (2023-02-10)
 

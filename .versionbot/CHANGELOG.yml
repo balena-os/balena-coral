@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Flowzone: Allow external contributions"
+      hash: a9eb5d8bcbb4376f4224a38e7b7bab2ca58410cf
+      body: ""
+      footer:
+        Changelog-entry: "Flowzone: Allow external contributions"
+        changelog-entry: "Flowzone: Allow external contributions"
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.108.19+rev6
+  title: ""
+  date: 2023-02-13T22:09:24.426Z
+- commits:
     - subject: Update contracts to 35f42232b2c24e9a43c4b0e171f9644b1b12a686
       hash: 0453c210a4d96e0c3897114bf33e16f954423a39
       body: Update contracts
