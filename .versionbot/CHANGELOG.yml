@@ -1,4 +1,20 @@
 - commits:
+    - subject: "linux-imx: Update linux-imx version"
+      hash: f798979ed1dd476f32dd7b2416bb297d4ef4aa45
+      body: |
+        Updating the kernel version fixes an issue which
+        prevents pcie and thus TPU from being detected.
+      footer:
+        Changelog-entry: "linux-imx: Update linux-imx version"
+        changelog-entry: "linux-imx: Update linux-imx version"
+        Signed-off-by: Jairo Calmon <2250898+heekinho@users.noreply.github.com>
+        signed-off-by: Jairo Calmon <2250898+heekinho@users.noreply.github.com>
+      author: Jairo Calmon
+      nested: []
+  version: 2.108.26
+  title: ""
+  date: 2023-02-15T18:10:04.587Z
+- commits:
     - subject: "Flowzone: Allow external contributions"
       hash: a9eb5d8bcbb4376f4224a38e7b7bab2ca58410cf
       body: ""

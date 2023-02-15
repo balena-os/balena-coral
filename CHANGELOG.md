@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.108.26
+## (2023-02-15)
+
+* linux-imx: Update linux-imx version [Jairo Calmon]
+
 # v2.108.19+rev6
 ## (2023-02-13)
 
