@@ -1,6 +1,33 @@
 Change log
 -----------
 
+# v2.108.26+rev3
+## (2023-02-21)
+
+
+<details>
+<summary> Update contracts to f32bce95ef31a6890812fbcf8f403a3ac2df95fd [Renovate Bot] </summary>
+
+> ## contracts-2.0.47
+> ### (2023-02-21)
+> 
+> * patch: Add docs to contracts for instructions partials [Vipul Gupta (@vipulgupta2048)]
+> 
+
+</details>
+
+
+<details>
+<summary> Update contracts to 93ba80ca1ffeced474d0567cc58703cdbeb629d5 [Renovate Bot] </summary>
+
+> ## contracts-2.0.47
+> ### (2023-02-21)
+> 
+> * patch: Add docs to contracts for instructions partials [Vipul Gupta (@vipulgupta2048)]
+> 
+
+</details>
+
 # v2.108.26+rev2
 ## (2023-02-18)
 

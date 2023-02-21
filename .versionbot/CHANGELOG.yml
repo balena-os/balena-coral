@@ -1,4 +1,46 @@
 - commits:
+    - subject: Update contracts to f32bce95ef31a6890812fbcf8f403a3ac2df95fd
+      hash: 478616e7d8c139dfffbfda34de9532fe6d7a354e
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to f32bce95ef31a6890812fbcf8f403a3ac2df95fd
+        changelog-entry: Update contracts to f32bce95ef31a6890812fbcf8f403a3ac2df95fd
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "patch: Add docs to contracts for instructions partials"
+              hash: c444d6388b2acc39eab04efc1a13703d654693e5
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+          version: contracts-2.0.47
+          title: ""
+          date: 2023-02-21T11:54:08.180Z
+    - subject: Update contracts to 93ba80ca1ffeced474d0567cc58703cdbeb629d5
+      hash: 8fb77827db947b4450ad69a06e8bb0d7dbe56d37
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 93ba80ca1ffeced474d0567cc58703cdbeb629d5
+        changelog-entry: Update contracts to 93ba80ca1ffeced474d0567cc58703cdbeb629d5
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "patch: Add docs to contracts for instructions partials"
+              hash: c444d6388b2acc39eab04efc1a13703d654693e5
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+          version: contracts-2.0.47
+          title: ""
+          date: 2023-02-21T11:54:08.180Z
+  version: 2.108.26+rev3
+  title: ""
+  date: 2023-02-21T13:18:23.353Z
+- commits:
     - subject: Update contracts to 103037ca9624070c01ed388e8fd425bef609e924
       hash: 987929f989f1d9d598a3398b8af7a59c9e45c76f
       body: Update contracts
