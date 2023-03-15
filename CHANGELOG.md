@@ -1,6 +1,23 @@
 Change log
 -----------
 
+# v2.112.14+rev1
+## (2023-03-15)
+
+
+<details>
+<summary> Update contracts to 40d6eaa3f0455babd1abcc1d11a6e6db60387797 [Renovate Bot] </summary>
+
+> ## contracts-2.0.51
+> ### (2023-02-24)
+> 
+> * node: do not set unsafe-perm with npm 9 and newer [Michal Toman]
+> 
+
+</details>
+
+* trigger deploy builds on multi-digit revisions too [Alex Gonzalez]
+
 # v2.112.14
 ## (2023-02-22)
 
