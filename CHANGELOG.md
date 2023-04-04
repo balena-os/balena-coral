@@ -1,6 +1,43 @@
 Change log
 -----------
 
+# v2.112.14+rev4
+## (2023-04-04)
+
+
+<details>
+<summary> Update contracts to a7fa4ca620414f2a2742210c5f97e0c207fa660b [Renovate Bot] </summary>
+
+> ## contracts-2.0.56
+> ### (2023-04-04)
+> 
+> * jetson-orin-nx-xavier-nx-devkit: Add contract for device type [Alexandru Costache]
+> 
+> ## contracts-2.0.55
+> ### (2023-03-29)
+> 
+> * iot-gate-imx8plus: Update provisioning instructions [Alexandru]
+> 
+> ## contracts-2.0.54
+> ### (2023-03-16)
+> 
+> * patch: Remove CircleCI in favor of Flowzone [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## contracts-2.0.53
+> ### (2023-03-16)
+> 
+> * patch: Fix fluid tags for revpi-core-3 [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## contracts-2.0.52
+> ### (2023-03-16)
+> 
+> * patch: Fix punctuation in partials [Vipul Gupta (@vipulgupta2048)]
+> * patch: Fix spelling of eMMC [Vipul Gupta (@vipulgupta2048)]
+> * patch: Fix spelling of while [Vipul Gupta (@vipulgupta2048)]
+> 
+
+</details>
+
 # v2.112.14+rev3
 ## (2023-03-16)
 

@@ -1,4 +1,94 @@
 - commits:
+    - subject: Update contracts to a7fa4ca620414f2a2742210c5f97e0c207fa660b
+      hash: aaceaedec839ffda3599533446b5987ea1b95e48
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to a7fa4ca620414f2a2742210c5f97e0c207fa660b
+        changelog-entry: Update contracts to a7fa4ca620414f2a2742210c5f97e0c207fa660b
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "jetson-orin-nx-xavier-nx-devkit: Add contract for device type"
+              hash: ddae0174c36b0893d723308d948d72c276787ed5
+              body: |
+                The provisioning instructions are incomplete at this time, they
+                will be updated once the balenaOS integration is complete. The
+                device needs to be inspected in staging first.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.56
+          title: ""
+          date: 2023-04-04T08:46:42.967Z
+        - commits:
+            - subject: "iot-gate-imx8plus: Update provisioning instructions"
+              hash: 25cbb9cb1c96a96367a1d35615f6b679e4a20df5
+              body: |
+                Bring in the latest updates from the coffee file
+                in the device repository.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.55
+          title: ""
+          date: 2023-03-29T18:35:00.091Z
+        - commits:
+            - subject: "patch: Remove CircleCI in favor of Flowzone"
+              hash: 9bed27db936f4ad6acffa4a74cd0fcad72cc313d
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+          version: contracts-2.0.54
+          title: ""
+          date: 2023-03-16T15:05:25.391Z
+        - commits:
+            - subject: "patch: Fix fluid tags for revpi-core-3"
+              hash: 9ec5bf22c8e0d5033a8b08a432b7651da8616360
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+          version: contracts-2.0.53
+          title: ""
+          date: 2023-03-16T13:25:57.856Z
+        - commits:
+            - subject: "patch: Fix punctuation in partials"
+              hash: 5062b5bb7b22233ea8851996151834fa0554ea2a
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+            - subject: "patch: Fix spelling of eMMC"
+              hash: 044cc4865a8997e40f3ee4724a3592ce2ae42cbf
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+            - subject: "patch: Fix spelling of while"
+              hash: 95fbb009bb43ef40b77c61961571c64308685aff
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+          version: contracts-2.0.52
+          title: ""
+          date: 2023-03-16T12:46:31.310Z
+  version: 2.112.14+rev4
+  title: ""
+  date: 2023-04-04T10:14:33.865Z
+- commits:
     - subject: Prevent duplicate CI workflow executions
       hash: 688e492f8fdf3ee122b123bb828529b15543ce24
       body: ""
