@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 66e817cc08c391f06d0cf16dded7e6cf2082d0ca
+      hash: d5dbedd08253a30b40fcf5eba5d9e3189316681d
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 66e817cc08c391f06d0cf16dded7e6cf2082d0ca
+        changelog-entry: Update balena-yocto-scripts to 66e817cc08c391f06d0cf16dded7e6cf2082d0ca
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "balena-lib: Do not return error if no balena user token is available"
+              hash: e335e248305cda86ce55f934b2b3ba8202f17454
+              body: >
+                The balena API token is only required for private device access so don't
+
+                fail if there is not one available.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.26
+          title: ""
+          date: 2023-04-12T15:18:36.631Z
+  version: 2.112.14+rev6
+  title: ""
+  date: 2023-04-12T17:46:59.455Z
+- commits:
     - subject: Update contracts to 777cd35ffb8bebb2a9d8a2ec6b88a45b2c937193
       hash: be8d1c940f83a66ba7da88ca3ace249ed59367c6
       body: Update contracts
