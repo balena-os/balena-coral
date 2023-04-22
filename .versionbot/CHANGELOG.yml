@@ -1,4 +1,44 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 34c8434ffcaeeeb14853082bbf2b4ecc5e0ec769
+      hash: 9db8b8998dfb331b65cb779faf4d21e10f87d8c2
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 34c8434ffcaeeeb14853082bbf2b4ecc5e0ec769
+        changelog-entry: Update balena-yocto-scripts to 34c8434ffcaeeeb14853082bbf2b4ecc5e0ec769
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "barys: fix removal of equals sign from argval"
+              hash: 8855ad4d31b45187e4007763b6bb084e08974807
+              body: >
+                When parsing additional variables to be passed to the bitbake build,
+
+                keys and values are split using equals as a delimiter. However, the
+
+                splitting process does not split only on the first occurrence, which
+
+                results in removing equals signs from the value as well. This is
+
+                problematic with base64 encoded strings, which are padded with equals
+
+                signs.
+
+
+                Split only on the first occurrence, leaving the value intact.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: balena-yocto-scripts-1.19.27
+          title: ""
+          date: 2023-04-21T22:08:39.297Z
+  version: 2.112.14+rev7
+  title: ""
+  date: 2023-04-22T00:23:21.430Z
+- commits:
     - subject: Update balena-yocto-scripts to 66e817cc08c391f06d0cf16dded7e6cf2082d0ca
       hash: d5dbedd08253a30b40fcf5eba5d9e3189316681d
       body: Update balena-yocto-scripts
