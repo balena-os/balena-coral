@@ -223,8 +223,8 @@ index f903060a4c..006b1dda8a 100644
  		"source\0" \
 -	"loadimage=fatload mmc ${mmcdev}:${mmcpart} ${loadaddr} ${image}\0" \
 -	"loadfdt=fatload mmc ${mmcdev}:${mmcpart} ${fdt_addr} ${fdt_file}\0" \
-+	"loadimage=ext4load mmc ${mmcdev}:${resin_root_part} ${zip_addr} boot/${image}; unzip ${zip_addr} ${loadaddr};\0" \
-+	"loadfdt=ext4load mmc ${mmcdev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}\0" \
++	"loadimage=if ext4load mmc ${mmcdev}:${resin_root_part} ${zip_addr} boot/${image}; then unzip ${zip_addr} ${loadaddr}; run balena_kernel_load_crc_save; else false; fi; \0" \
++	"loadfdt=if ext4load mmc ${mmcdev}:${resin_root_part} ${fdt_addr} boot/${fdt_file}; then run balena_fdt_load_crc_save; else false; fi;\0" \
  	"mmcboot=echo Booting from mmc ...; " \
  		"run mmcargs; " \
  		"if test ${boot_fdt} = yes || test ${boot_fdt} = try; then " \

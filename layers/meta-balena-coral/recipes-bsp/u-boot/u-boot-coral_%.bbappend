@@ -19,6 +19,7 @@ SRC_URI_asus-tinker-edge-t = "\
     git://github.com/TinkerEdgeT/mendel-uboot-imx;protocol=https;branch=${SRCBRANCH_asus-tinker-edge-t} \
     file://0001-tools-allow-to-override-python.patch \
     file://0002-ext4-cache-extent-blocks-during-file-reads.patch \
+    file://0003-u-boot-Run-crc32-checks.patch \
 "
 
 SRC_URI_append = " \
