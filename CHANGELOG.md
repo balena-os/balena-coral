@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v3.2.8
+## (2023-08-25)
+
+* recipes-core/images: Remove max size for initramfs [Alexandru Costache]
+* Remove pull_request_target event run for ESR targets [Alex Gonzalez]
+
 # v2.112.14+rev8
 ## (2023-04-27)
 

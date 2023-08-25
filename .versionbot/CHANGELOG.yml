@@ -1,4 +1,43 @@
 - commits:
+    - subject: "recipes-core/images: Remove max size for initramfs"
+      hash: f5c7bdc0c9e6bd840055609ee42138819b7aa491
+      body: |
+        This old pinning to a static value should no longer
+        be necessary.
+      footer:
+        Changelog-entry: "recipes-core/images: Remove max size for initramfs"
+        changelog-entry: "recipes-core/images: Remove max size for initramfs"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+    - subject: Remove pull_request_target event run for ESR targets
+      hash: 6b5a870ca0b938d628dd99aee2299e7438f50cdf
+      body: >
+        Backporting to ESR branches hits a flowzone error as both pull_request
+
+        and pull_request_target run and this only works for master.
+
+
+        Removing the pull_request_target run for ESR branches fixes this, but
+
+        also removes the possibility of external pull requests into ESR branches,
+
+        which we don't actually need.
+
+
+        [skip ci]
+      footer:
+        Changelog-entry: Remove pull_request_target event run for ESR targets
+        changelog-entry: Remove pull_request_target event run for ESR targets
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 3.2.8
+  title: ""
+  date: 2023-08-25T16:14:18.128Z
+- commits:
     - subject: Update contracts to 6c6ed28d459bc48102a69cdf0850d2eb4c778ce7
       hash: e72184f3f4f2e620c21f283d48029c4c039e2d38
       body: Update contracts
