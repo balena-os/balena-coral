@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-os/github-workflows to v0.0.21
+      hash: 0088be9f2dd1041529cc7d61e3b614a2def87567
+      body: Update balena-os/github-workflows
+      footer:
+        Changelog-entry: Update balena-os/github-workflows to v0.0.21
+        changelog-entry: Update balena-os/github-workflows to v0.0.21
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 3.2.8+rev4
+  title: ""
+  date: 2023-08-28T10:45:25.357Z
+- commits:
     - subject: "recipes-bsp/u-boot: Run rc32 checks"
       hash: 5ee6ed506f215cab95dad311d86f6d7d608ee8ce
       body: ""
