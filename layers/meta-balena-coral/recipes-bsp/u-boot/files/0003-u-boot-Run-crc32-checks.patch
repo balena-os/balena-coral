@@ -1,0 +1,27 @@
+From 0930672b497e1ec7a8826a17aee8fb91b9df5700 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Thu, 24 Aug 2023 11:26:14 +0200
+Subject: [PATCH] u-boot: Run crc32 checks
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ include/configs/imx8mq_phanbell.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/include/configs/imx8mq_phanbell.h b/include/configs/imx8mq_phanbell.h
+index 606d5e4a9a..ad7dcfbded 100644
+--- a/include/configs/imx8mq_phanbell.h
++++ b/include/configs/imx8mq_phanbell.h
+@@ -135,6 +135,8 @@
+ 		"run mmcargs; " \
+ 		"if test ${boot_fdt} = yes || test ${boot_fdt} = try; then " \
+ 			"if run loadfdt; then " \
++				"run balena_kernel_load_crc_check; " \
++				"run balena_fdt_load_crc_check; " \
+ 				"booti ${loadaddr} - ${fdt_addr}; " \
+ 			"else " \
+ 				"echo WARN: Cannot load the DT; " \
+-- 
+2.37.2
+
