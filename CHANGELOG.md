@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v3.2.8+rev3
+## (2023-08-28)
+
+* recipes-bsp/u-boot: Run rc32 checks [Alexandru Costache]
+
 # v3.2.8+rev2
 ## (2023-08-25)
 
