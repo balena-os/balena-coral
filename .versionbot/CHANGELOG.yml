@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update layers/meta-balena to 6db6c7c9774bf58dc4676816280f81fae83df78e
+      hash: 9b338c9a22121f3fff530753a605e4c0a99150fa
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 6db6c7c9774bf58dc4676816280f81fae83df78e
+        changelog-entry: Update layers/meta-balena to 6db6c7c9774bf58dc4676816280f81fae83df78e
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "classes: sign: add a retry to the signing call"
+              hash: 0f6d0ccf27f9a356fef918bccf8d328d42af0859
+              body: >
+                When the signed artifacts are big we see closed connections
+                because
+
+                of timeouts in the front caches. A retry should help.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-4.0.1
+          title: ""
+          date: 2023-09-08T12:59:39.384Z
+  version: 4.0.1
+  title: ""
+  date: 2023-09-08T14:00:11.182Z
+- commits:
     - subject: Update layers/meta-balena to b85be94a14e77496ff21e131642f596a247efd59
       hash: b5aa562245b406ba0a70d28321018c69d9cdbd34
       body: Update layers/meta-balena
