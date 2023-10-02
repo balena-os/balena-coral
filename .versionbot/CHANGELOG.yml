@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to d68265ebeac98e7814829da7e7f6bb2a9aff8e39
+      hash: cee4be76617345f76add6ce8a57ad7f73f9dbcfb
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to d68265ebeac98e7814829da7e7f6bb2a9aff8e39
+        changelog-entry: Update contracts to d68265ebeac98e7814829da7e7f6bb2a9aff8e39
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "hw.device-type: Add Eurotec Lowpad lcbzu9 device"
+              hash: dab4d718a6012af2774111fb00c0a4d2f3497d24
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Francois Loubser <francois.loubser@topic.nl>
+                signed-off-by: Francois Loubser <francois.loubser@topic.nl>
+              author: Francois Loubser
+          version: contracts-2.0.76
+          title: ""
+          date: 2023-10-02T06:46:15.804Z
+  version: 4.0.16+rev1
+  title: ""
+  date: 2023-10-02T07:45:33.426Z
+- commits:
     - subject: Update layers/meta-balena to 1c9c4813033186cefde51b9639edf7035f070c9d
       hash: 4428baa1f4ac36b45a77489b73afe48f3f78f89e
       body: Update layers/meta-balena
