@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena-yocto-scripts to e26625baaf2c9cca33933e4baac7b448d644ee30
+      hash: a1039e6c0ee1eeab27cd488233d9a6a564429476
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to e26625baaf2c9cca33933e4baac7b448d644ee30
+        changelog-entry: Update balena-yocto-scripts to e26625baaf2c9cca33933e4baac7b448d644ee30
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "flowzone: allow external contributions"
+              hash: e44cdd1b12d22ffb6d93408e794defee812436c2
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.36
+          title: ""
+          date: 2023-10-10T12:37:01.374Z
+  version: 4.0.22+rev1
+  title: ""
+  date: 2023-10-10T14:13:10.803Z
+- commits:
     - subject: Update layers/meta-balena to 010ff351b1875554aa86fbaa4f1ac5b8f865cc7f
       hash: 3fd59a98b38ab05c576ca497fde24e3a562a6735
       body: Update layers/meta-balena
