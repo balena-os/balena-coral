@@ -1,4 +1,36 @@
 - commits:
+    - subject: Update layers/meta-balena to 64cd9e85978a6148a5b0f9231edab4fe42db9c33
+      hash: ebbe0fa2330a739bb2def4cb7f24db9ac13fd04e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 64cd9e85978a6148a5b0f9231edab4fe42db9c33
+        changelog-entry: Update layers/meta-balena to 64cd9e85978a6148a5b0f9231edab4fe42db9c33
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "resin-init-flasher: Allow building images for non-flasher devices that
+                have internal storage"
+              hash: 3a887512b343b80208196f6792a48f81d1a8c8f9
+              body: >
+                As per the internal thread:
+                https://balena.zulipchat.com/#narrow/stream/360838-balena-io.2Fos.2Fdevices/topic/balena-raspberrypi.20jenkins.20build.20failures/near/423970246
+
+
+                Currently devices with on-board storage fail to build in jenkins, if they don't provide a flasher image. One example is the CM4. Since there are multiple devices using this configuration, let's re-enable builds for all of them.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+              nested: []
+          version: meta-balena-5.1.44
+          title: ""
+          date: 2024-02-29T16:16:34.376Z
+  version: 5.1.44
+  title: ""
+  date: 2024-02-29T19:24:22.708Z
+- commits:
     - subject: Update layers/meta-balena to 87036c0cd6a4e23b55300c64f62158328e0eb779
       hash: 6379bcb2d838edcb4e3fb6b861d49d1f9c7935a5
       body: Update layers/meta-balena
