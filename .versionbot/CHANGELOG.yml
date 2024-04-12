@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to a7fe21a582d79c7086ecada4b670348b43804cdb
+      hash: a624e888b656c235023c9ea1121a1e31fa01457c
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a7fe21a582d79c7086ecada4b670348b43804cdb
+        changelog-entry: Update layers/meta-balena to a7fe21a582d79c7086ecada4b670348b43804cdb
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "classes: sign-rsa: add class for RSA artifact signing"
+              hash: 65a73907c12f03599cec6aed5d83b4f0f4538f84
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-5.2.5
+          title: ""
+          date: 2024-04-12T15:16:52.502Z
+  version: 5.2.5
+  title: ""
+  date: 2024-04-12T17:48:58.108Z
+- commits:
     - subject: Update contracts to d06ad25196f67c4d20ad309941192fdddf80e307
       hash: 423f649047f9d23f8d58b4e63755a659766e8363
       body: Update contracts
