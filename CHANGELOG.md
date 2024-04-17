@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v5.2.7
+## (2024-04-17)
+
+
+<details>
+<summary> Update layers/meta-balena to edcdfc634c0b32648f5c27aeaef156ebc39c9e7c [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.2.7
+> ### (2024-04-16)
+> 
+> * packagegroup-resin: Install ldd script in balenaOS images [Alexandru]
+> 
+
+</details>
+
 # v5.2.6
 ## (2024-04-16)
 
