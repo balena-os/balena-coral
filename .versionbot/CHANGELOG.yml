@@ -1,4 +1,39 @@
 - commits:
+    - subject: Update layers/meta-balena to 5d7a7ecfdc69c481e6e762e38e66b8b291a70e32
+      hash: c117b412ca7c1119f432acbcffc7b7d7ff80ad31
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5d7a7ecfdc69c481e6e762e38e66b8b291a70e32
+        changelog-entry: Update layers/meta-balena to 5d7a7ecfdc69c481e6e762e38e66b8b291a70e32
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "Test: Unmanaged: Replace ping command in tests with curl"
+              hash: 071c0180a03203cb34fc80b127501dc1385dbb3d
+              body: >
+                This change is required to migrate existing tests to run QEMU
+                worker tests on GitHub Actions.
+
+                GitHub hosted runners can't run the `ping` command:
+                https://github.com/actions/runner-images/issues/1519 by design.
+
+                If we still intend to use `ping`, the solution would be running
+                QEMU worker tests on self-hosted runners which allow ICMP
+                packets
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-5.2.8
+          title: ""
+          date: 2024-04-17T15:22:20.514Z
+  version: 5.2.8
+  title: ""
+  date: 2024-04-17T19:09:00.882Z
+- commits:
     - subject: Update layers/meta-balena to edcdfc634c0b32648f5c27aeaef156ebc39c9e7c
       hash: 01191168dde8ce85e65dc5fd0ed5d41ffe639981
       body: Update layers/meta-balena
