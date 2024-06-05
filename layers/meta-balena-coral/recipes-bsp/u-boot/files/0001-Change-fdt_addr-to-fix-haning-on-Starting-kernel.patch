@@ -1,0 +1,26 @@
+From 474225730ec44e88acf2ce74fad4368b61d1e01a Mon Sep 17 00:00:00 2001
+From: Leslie Yu <leslie_yu@asus.com>
+Date: Wed, 5 Jun 2024 15:05:24 +0800
+Subject: [PATCH] Change fdt_addr to fix haning on Starting kernel..
+
+Signed-off-by: Leslie Yu <leslie_yu@asus.com>
+---
+ include/configs/imx8mq_phanbell.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/imx8mq_phanbell.h b/include/configs/imx8mq_phanbell.h
+index 606d5e4a9a..c9f35db6b8 100644
+--- a/include/configs/imx8mq_phanbell.h
++++ b/include/configs/imx8mq_phanbell.h
+@@ -114,7 +114,7 @@
+ 	"script=boot.scr\0" \
+ 	"image=Image.gz\0" \
+ 	"console=ttymxc0,115200 earlycon=ec_imx6q,0x30860000,115200\0" \
+-	"fdt_addr=0x43000000\0"			\
++	"fdt_addr=0x44000000\0"			\
+ 	"fdt_high=0xffffffffffffffff\0"		\
+ 	"boot_fdt=try\0" \
+ 	"fdt_file=fsl-imx8mq-phanbell.dtb\0" \
+-- 
+2.34.1
+
