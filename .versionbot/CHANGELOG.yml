@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update layers/meta-freescale digest to 2ee3f2a
+      hash: ec971b722cf11960e6e84580db962bf84626e4d7
+      body: ""
+      footer:
+        Changelog-entry: Update layers/meta-freescale digest to 2ee3f2a
+        changelog-entry: Update layers/meta-freescale digest to 2ee3f2a
+        Signed-off-by: Leslie Yu <leslie_yu@asus.com>
+        signed-off-by: Leslie Yu <leslie_yu@asus.com>
+      author: Leslie Yu
+      nested: []
+  version: 5.3.21+rev3
+  title: ""
+  date: 2024-06-28T15:37:04.380Z
+- commits:
     - subject: Update balena-yocto-scripts to bdd131fd36a3edcc9a1bb2af493794ced60379a6
       hash: 272911c8e1cd28ea6f652d50b05b3851ad65c953
       body: Update balena-yocto-scripts

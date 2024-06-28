@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.3.21+rev3
+## (2024-06-28)
+
+* Update layers/meta-freescale digest to 2ee3f2a [Leslie Yu]
+
 # v5.3.21+rev2
 ## (2024-06-14)
 
