@@ -24,4 +24,5 @@ SRC_URI_asus-tinker-edge-t = "\
 
 SRC_URI_append = " \
     file://u-boot-Integrate-with-BalenaOS-load-kernel-from-root.patch \
+    file://0001-Change-fdt_addr-to-fix-haning-on-Starting-kernel.patch \
 "
