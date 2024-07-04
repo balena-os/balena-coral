@@ -1,6 +1,42 @@
 Change log
 -----------
 
+# v5.3.24
+## (2024-07-04)
+
+
+<details>
+<summary> Update layers/meta-balena to e1d709a6f00e8dd3271a3c84d9fb6430cedec485 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.24
+> ### (2024-07-04)
+> 
+> * workflows: fix linter errors [Alex Gonzalez]
+> 
+> ## meta-balena-5.3.23
+> ### (2024-07-02)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.3.17 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-16.3.17
+>> #### (2024-06-25)
+>> 
+>> * Fix engine deadlock on network+service change [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.3.16
+>> #### (2024-06-17)
+>> 
+>> * Update balena-io/deploy-to-balena-action action to v2.0.72 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v5.3.22
 ## (2024-07-01)
 
