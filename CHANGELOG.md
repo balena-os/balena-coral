@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v5.3.26
+## (2024-07-07)
+
+
+<details>
+<summary> Update layers/meta-balena to 5d566dff6a713596ef0b62a3ef1677c4251893d8 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.26
+> ### (2024-07-07)
+> 
+> * tests: secureboot: rename resetWorker() to resetDUT() [Alex Gonzalez]
+> * tests: secureboot: refactor to facilitate extension [Alex Gonzalez]
+> 
+
+</details>
+
 # v5.3.25
 ## (2024-07-06)
 

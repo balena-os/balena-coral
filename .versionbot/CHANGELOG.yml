@@ -1,4 +1,44 @@
 - commits:
+    - subject: Update layers/meta-balena to 5d566dff6a713596ef0b62a3ef1677c4251893d8
+      hash: bbadaa52139e276ed7f7a3ea1ade154463cfb3e2
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5d566dff6a713596ef0b62a3ef1677c4251893d8
+        changelog-entry: Update layers/meta-balena to 5d566dff6a713596ef0b62a3ef1677c4251893d8
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: secureboot: rename resetWorker() to resetDUT()"
+              hash: 22091c584523ce1255836530f3e4192a4cacbfb7
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "tests: secureboot: refactor to facilitate extension"
+              hash: b0ee0abd0dbd483fc60ca0ba96afd00da44c7c6f
+              body: >
+                As the secure boot feature is extended to more device types, the
+                test
+
+                needs to be easy to extend.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-5.3.26
+          title: ""
+          date: 2024-07-07T00:24:51.531Z
+  version: 5.3.26
+  title: ""
+  date: 2024-07-07T03:21:39.785Z
+- commits:
     - subject: Update layers/meta-balena to 6d368bce75115252c2a9253aebd3444d19771595
       hash: 39d74e36e9274dad42a4c2cb750ff3a38fad941e
       body: Update layers/meta-balena
