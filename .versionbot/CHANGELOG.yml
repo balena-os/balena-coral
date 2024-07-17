@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update layers/meta-balena to eefb5c821b33171a468cd30e4de51e710a36ae7d
+      hash: 39dac1cf4116b7bb3e023163b303cb02552c4339
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to eefb5c821b33171a468cd30e4de51e710a36ae7d
+        changelog-entry: Update layers/meta-balena to eefb5c821b33171a468cd30e4de51e710a36ae7d
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Add build-only GHA workflows for missing devices
+              hash: af70358b6b17b309cb043a3f15e1cca8084b1976
+              body: |
+                For meta-balena PRs we only want to test virtual devices,
+                but we will do a sanity build for many types.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-5.4.1
+          title: ""
+          date: 2024-07-17T18:02:25.707Z
+  version: 5.4.1
+  title: ""
+  date: 2024-07-17T21:03:23.467Z
+- commits:
     - subject: Update contracts to 17b44ca078f3bca2193858559d1276cc48680531
       hash: a4e64d86d103ff4211d6559e8e872dbe9ef8d409
       body: Update contracts
