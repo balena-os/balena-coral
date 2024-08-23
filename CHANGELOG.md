@@ -1,6 +1,57 @@
 Change log
 -----------
 
+# v6.0.2+rev4
+## (2024-08-23)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 58b4dd401dd6dd27262675b8061c7fddf5a593d4 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.25.25
+> ### (2024-08-23)
+> 
+> * Add unique unique identifiers to summary job [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.25.24
+> ### (2024-08-21)
+> 
+> * ensure "force-finalize" guarantees a finalized release [rcooke-warwick]
+> * update example workflow to use "deploy-environment" input [rcooke-warwick]
+> * remove "deploy-esr" input [rcooke-warwick]
+> * remove "deploy-s3" input [rcooke-warwick]
+> * remove "deploy-hostapp" and add "force-finalize" and "finalize-on-push-if-tests-passed" [rcooke-warwick]
+> * rename "envinroment" input to "deploy-environment" for clarity [rcooke-warwick]
+> * remove os-dev input [rcooke-warwick]
+> 
+> ## balena-yocto-scripts-1.25.23
+> ### (2024-08-15)
+> 
+> * Add mermaid flowchart to yocto workflow README [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.25.22
+> ### (2024-08-12)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.21
+> ### (2024-08-06)
+> 
+> * Update balena-os/leviathan digest to f4e9332 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.20
+> ### (2024-08-06)
+> 
+> * Update actions/upload-artifact action to v4.3.6 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.25.19
+> ### (2024-08-06)
+> 
+> * Update balena-os/leviathan digest to a16cf0f [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.0.2+rev3
 ## (2024-08-05)
 

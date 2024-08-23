@@ -1,4 +1,185 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 58b4dd401dd6dd27262675b8061c7fddf5a593d4
+      hash: b6a76a1c22097085d5cb1761dffc2f99d558fc9c
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 58b4dd401dd6dd27262675b8061c7fddf5a593d4
+        changelog-entry: Update balena-yocto-scripts to 58b4dd401dd6dd27262675b8061c7fddf5a593d4
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Add unique unique identifiers to summary job
+              hash: 625a45b652c332ec5d048caeee7dc25638df8dfb
+              body: |
+                The "All jobs" job is used for branch protection
+                as it captures the overall success/fail of all
+                the test matrices and build.
+
+                However without a unique name we are unable
+                to identify the device type in order to mark it as required.
+
+                This change adds a single instance matrix
+                to the build job and as a result will append the machine
+                name and deploy environment in the job name.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.25.25
+          title: ""
+          date: 2024-08-23T15:51:41.585Z
+        - commits:
+            - subject: ensure "force-finalize" guarantees a finalized release
+              hash: 08e6722b16af9c6e339fd1862b28d641fdcc5035
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: update example workflow to use "deploy-environment" input
+              hash: 044e2122041ba0d7d4a18c2d0cd653b512c42130
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: remove "deploy-esr" input
+              hash: 2ea4e3b60c88da21427cf525ed7fed4ab32de6f5
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: remove "deploy-s3" input
+              hash: dee1de47e43055e8ef8dd3dc17c8e614e89e835e
+              body: |
+                Instead, always deploy to s3 if we "deploy" anything
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: remove "deploy-hostapp" and add "force-finalize" and
+                "finalize-on-push-if-tests-passed"
+              hash: d1de37252ca8d1d1e41d6253abdac602d9999f1d
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: rename "envinroment" input to "deploy-environment" for clarity
+              hash: 14e6a1e57faf63f98970254902fd82deb49e586d
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: remove os-dev input
+              hash: 8f5bd516abe24758ee129cb835d3b021bb5c3284
+              body: >
+                Removing denabling of development features as we determined it
+                would rarely be used - dev images can just be built locally
+                instead
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.25.24
+          title: ""
+          date: 2024-08-21T16:22:42.006Z
+        - commits:
+            - subject: Add mermaid flowchart to yocto workflow README
+              hash: af6f93c1a415ecf90785428c32b31801b26ad160
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.25.23
+          title: ""
+          date: 2024-08-15T20:45:12.698Z
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 156711aceb7e2be7048ea668800ff9368bf35df8
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.22
+          title: ""
+          date: 2024-08-12T01:57:02.017Z
+        - commits:
+            - subject: Update balena-os/leviathan digest to f4e9332
+              hash: 6a7097208111936aac9a8862c61d6f600d1652dd
+              body: |
+                Update balena-os/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.21
+          title: ""
+          date: 2024-08-06T18:50:02.588Z
+        - commits:
+            - subject: Update actions/upload-artifact action to v4.3.6
+              hash: 03b4f76a25f7c887c3c1cbae6293bce772773f6d
+              body: |
+                Update actions/upload-artifact from 4.3.5 to 4.3.6
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.20
+          title: ""
+          date: 2024-08-06T16:39:55.294Z
+        - commits:
+            - subject: Update balena-os/leviathan digest to a16cf0f
+              hash: f0d8fdd6add9aa34a89234491e6a82ac7583b48e
+              body: |
+                Update balena-os/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.19
+          title: ""
+          date: 2024-08-06T12:46:47.450Z
+  version: 6.0.2+rev4
+  title: ""
+  date: 2024-08-23T18:26:43.749Z
+- commits:
     - subject: Update balena-yocto-scripts to 730286256ce2ff6db73bce2b8289d2199596269e
       hash: db30beed29be0f6c5f7c3952aea43d33caf6d376
       body: Update balena-yocto-scripts
