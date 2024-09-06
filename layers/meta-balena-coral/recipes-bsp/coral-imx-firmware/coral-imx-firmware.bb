@@ -7,9 +7,9 @@ SRCBRANCH = "release-day"
 SRC_URI = "\
     git://coral.googlesource.com/imx-firmware;protocol=https;branch=${SRCBRANCH} \
 "
-SRCBRANCH_asus-tinker-edge-t = "mendel-day-imx_8m"
-SRC_URI_asus-tinker-edge-t = "\
-    git://github.com/TinkerEdgeT/mendel-imx-firmware;protocol=https;branch=${SRCBRANCH_asus-tinker-edge-t} \
+SRCBRANCH:asus-tinker-edge-t = "mendel-day-imx_8m"
+SRC_URI:asus-tinker-edge-t = "\
+    git://github.com/TinkerEdgeT/mendel-imx-firmware;protocol=https;branch=${SRCBRANCH:asus-tinker-edge-t} \
 "
 
 # Using HEAD revision starting from now, since we can bring in BT
@@ -20,7 +20,7 @@ inherit allarch
 
 S = "${WORKDIR}/git"
 
-FILES_${PN} += " /lib/firmware/* "
+FILES:${PN} += " /lib/firmware/* "
 
 do_install() {
     install -d ${D}/lib/firmware/

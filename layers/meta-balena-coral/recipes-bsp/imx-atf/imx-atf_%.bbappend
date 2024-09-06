@@ -9,8 +9,8 @@ SRC_URI = "git://coral.googlesource.com/imx-atf.git;protocol=https;branch=${SRCB
 "
 
 SRCBRANCH_asus-tinker-edge-t = "mendel-day-imx_8m"
-SRC_URI_asus-tinker-edge-t = "\
-    git://github.com/TinkerEdgeT/mendel-imx-atf;protocol=https;branch=${SRCBRANCH_asus-tinker-edge-t} \
+SRC_URI:asus-tinker-edge-t = "\
+    git://github.com/TinkerEdgeT/mendel-imx-atf;protocol=https;branch=${SRCBRANCH:asus-tinker-edge-t} \
     file://0001-Allow-BUILD_STRING-to-be-set-in-.revision-file.patch \
 "
 
