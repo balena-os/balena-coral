@@ -39,6 +39,7 @@ SRC_URI:asus-tinker-edge-t = "\
     file://0002-include-linux-module.h-copy-init-exit-attrs-to-.patch \
     file://0003-Enable-uart1.patch \
     file://0004-Add-v4l2loopback-kernel-module.patch \
+    file://0005-scripts-dtc-Remove-redundant-YYLLOC-global-declarati.patch \
 "
 
 BALENA_CONFIGS:append:asus-tinker-edge-t = " v4l2loopback"
