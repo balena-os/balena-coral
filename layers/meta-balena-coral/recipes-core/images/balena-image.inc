@@ -5,8 +5,6 @@ IMAGE_FSTYPES:append:coral-dev = " balenaos-img"
 BALENA_BOOT_SIZE = "80960"
 
 BALENA_BOOT_PARTITION_FILES = " \
-    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/Image.gz \
-    fsl-imx8mq-phanbell.dtb:/ \
     imx-boot:/ \
 "
 
