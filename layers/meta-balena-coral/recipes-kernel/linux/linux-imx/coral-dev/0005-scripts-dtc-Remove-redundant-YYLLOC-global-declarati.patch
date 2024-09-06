@@ -1,0 +1,25 @@
+From 1752ed7d556887e54cacc0a481feb8c74fff0e6a Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Thu, 5 Sep 2024 08:26:17 +0000
+Subject: [PATCH] scripts/dtc: Remove redundant YYLLOC global declaration
+
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ scripts/dtc/dtc-parser.tab.c_shipped | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/scripts/dtc/dtc-parser.tab.c_shipped b/scripts/dtc/dtc-parser.tab.c_shipped
+index 0a7a5ed86f04..f7cfba43443f 100644
+--- a/scripts/dtc/dtc-parser.tab.c_shipped
++++ b/scripts/dtc/dtc-parser.tab.c_shipped
+@@ -1202,7 +1202,6 @@ int yychar;
+ /* The semantic value of the lookahead symbol.  */
+ YYSTYPE yylval;
+ /* Location data for the lookahead symbol.  */
+-YYLTYPE yylloc
+ # if defined YYLTYPE_IS_TRIVIAL && YYLTYPE_IS_TRIVIAL
+   = { 1, 1, 1, 1 }
+ # endif
+-- 
+2.34.1
+

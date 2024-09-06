@@ -1,8 +1,8 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/patches:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/patches:"
 
 # Bluez tool hciattach needs to be patched to be able
 # to load the firmware for this specific BT chip
-SRC_URI_append_coral-dev = " \
+SRC_URI:append:coral-dev = " \
     file://0001-bluetooth-Add-bluetooth-support-for-QCA6174-chip.patch \
     file://0002-hciattach-set-flag-to-enable-HCI-reset-on-init.patch \
     file://0003-hciattach-instead-of-strlcpy-with-strncpy-to-avoid-r.patch \

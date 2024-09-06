@@ -1,0 +1,26 @@
+From c8a96b3017a2d882346fc47bd132e2427b94d0bd Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Thu, 5 Sep 2024 11:50:37 +0000
+Subject: [PATCH] scripts: Fix dtc version check
+
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ scripts/dtc-version.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/dtc-version.sh b/scripts/dtc-version.sh
+index e8c94d390b..98fef3521e 100755
+--- a/scripts/dtc-version.sh
++++ b/scripts/dtc-version.sh
+@@ -14,7 +14,7 @@ if [ ${#dtc} -eq 0 ]; then
+ 	exit 1
+ fi
+ 
+-MAJOR=$($dtc -v | head -1 | awk '{print $NF}' | cut -d . -f 1)
++MAJOR=$($dtc -v | head -1 | awk '{print $NF}' | cut -d . -f 1 | cut -d v -f 2)
+ MINOR=$($dtc -v | head -1 | awk '{print $NF}' | cut -d . -f 2)
+ 
+ printf "%02d%02d\\n" $MAJOR $MINOR
+-- 
+2.34.1
+
