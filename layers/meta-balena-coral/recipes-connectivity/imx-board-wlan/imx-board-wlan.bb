@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://debian/copyright;md5=51d4c6e193b82a7bfeb4ced13ddb10a4"
@@ -13,7 +13,7 @@ SRCREV = "99cb9feb00021d6d2ed48cc0756839c41b737630"
 # imx-board-wlan uses a python tool to generate
 # wifi & bt MAC addresses at runtime. Can't
 # install python just for this, so we re-wrote it in C++
-SRC_URI_append = " \
+SRC_URI:append = " \
     file://setup_mac.cpp \
     file://btfw_loader.service \
     file://imx-board-wlan.service \
@@ -26,7 +26,7 @@ S = "${WORKDIR}/git"
 
 # In release-day, imx-board-wlan service file is removed,
 # so we add our own to trigger the MAC binary generation
-FILES_${PN} += " /lib/firmware/* \
+FILES:${PN} += " /lib/firmware/* \
                  /lib/systemd/system/imx-board-wlan.service \
                  /lib/systemd/system/btfw_loader.service \
                  /usr/sbin/setup_mac \
@@ -71,4 +71,4 @@ do_install() {
     install -m 0644 ${WORKDIR}/wlan.conf ${D}/etc/modprobe.d/wlan.conf
 }
 
-SYSTEMD_SERVICE_${PN} = " imx-board-wlan.service btfw_loader.service"
+SYSTEMD_SERVICE:${PN} = " imx-board-wlan.service btfw_loader.service"
