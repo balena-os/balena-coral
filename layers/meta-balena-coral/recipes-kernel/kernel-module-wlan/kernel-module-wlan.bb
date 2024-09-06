@@ -25,4 +25,4 @@ EXTRA_OEMAKE += "CONFIG_QCA_CLD_WLAN=m"
 # for multiple devices, as the driver no longer
 # waits for the MAC path to be provided before
 # initialization in 4.14.98.
-KERNEL_MODULE_AUTOLOAD_remove = "wlan"
+KERNEL_MODULE_AUTOLOAD:remove = "wlan"

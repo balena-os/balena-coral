@@ -2,7 +2,7 @@ inherit kernel-resin
 
 # qcacld driver build fails
 # if this config is not set as built-in
-BALENA_CONFIGS_append = " \
+BALENA_CONFIGS:append = " \
     cfg80211_builtin \
 "
 
