@@ -1,4 +1,18 @@
 - commits:
+    - subject: Switch to kirkstone
+      hash: ac25818e079e113acb4092e6fb5c4bdb0eb98254
+      body: ""
+      footer:
+        Changelog-entry: Switch to kirkstone
+        changelog-entry: Switch to kirkstone
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.0.2+rev5
+  title: ""
+  date: 2024-09-06T09:20:08.346Z
+- commits:
     - subject: Update balena-yocto-scripts to 58b4dd401dd6dd27262675b8061c7fddf5a593d4
       hash: b6a76a1c22097085d5cb1761dffc2f99d558fc9c
       body: Update balena-yocto-scripts

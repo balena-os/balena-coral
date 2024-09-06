@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.2+rev5
+## (2024-09-06)
+
+* Switch to kirkstone [Florin Sarbu]
+
 # v6.0.2+rev4
 ## (2024-08-23)
 
