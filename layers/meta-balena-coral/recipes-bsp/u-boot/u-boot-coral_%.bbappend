@@ -11,6 +11,9 @@ inherit resin-u-boot
 
 SRCBRANCH = "release-day"
 SRCREV = "8523a101cd4dda7ca62d3f99c4bd1b3718cca953"
+SRC_URI = " \
+    git://coral.googlesource.com/uboot-imx;protocol=https;branch=${SRCBRANCH} \
+"
 
 BUILD_CPPFLAGS += " -static"
 
@@ -20,13 +23,13 @@ SRC_URI:asus-tinker-edge-t = "\
     file://0001-tools-allow-to-override-python.patch \
     file://0002-ext4-cache-extent-blocks-during-file-reads.patch \
     file://0003-u-boot-Run-crc32-checks.patch \
-    file://0004-scripts-Fix-dtc-version-check.patch \
-    file://0005-scripts-Makefile.lib-remove-overridden-target-obj-he.patch \
 "
 
 SRC_URI:append = " \
     file://u-boot-Integrate-with-BalenaOS-load-kernel-from-root.patch \
     file://0001-Change-fdt_addr-to-fix-haning-on-Starting-kernel.patch \
+    file://0004-scripts-Fix-dtc-version-check.patch \
+    file://0005-scripts-Makefile.lib-remove-overridden-target-obj-he.patch \
 "
 
 UBOOT_CONFIG[sd] = "mx8mq_phanbell_defconfig,sdcard"
