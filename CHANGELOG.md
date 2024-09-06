@@ -1,6 +1,41 @@
 Change log
 -----------
 
+# v6.0.21+rev1
+## (2024-09-06)
+
+
+<details>
+<summary> Update contracts to 59752b7f99c1e5576c605a2f4188f9661468319f [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.113
+> ### (2024-08-20)
+> 
+> * iotdin-imx8p: Update the devices contract [Valentin Raevsky]
+> 
+> ## contracts-2.0.112
+> ### (2024-08-19)
+> 
+> * Add support for Ubuntu Noble [ruffsl]
+> 
+> ## contracts-2.0.111
+> ### (2024-08-08)
+> 
+> * patch: Add versionList to OpenJDK [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## contracts-2.0.110
+> ### (2024-08-07)
+> 
+> * Add CompuLab iotdin-imx8p to harware contract. [Valentin Raevsky]
+> 
+> ## contracts-2.0.109
+> ### (2024-08-06)
+> 
+> * hw.device-type: Update provisioning instructions for AGX Orin 64GB [Alexandru]
+> 
+
+</details>
+
 # v6.0.21
 ## (2024-09-06)
 
