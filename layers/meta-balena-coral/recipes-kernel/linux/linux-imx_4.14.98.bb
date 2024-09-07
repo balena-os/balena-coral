@@ -25,6 +25,7 @@ SRC_URI:coral-dev = "\
     file://defconfig \
     file://0001-compiler-attributes-add-support-for-copy-gcc-9.patch \
     file://0002-include-linux-module.h-copy-init-exit-attrs-to-.patch \
+    file://0005-scripts-dtc-Remove-redundant-YYLLOC-global-declarati.patch \
 "
 
 SUMMARY:asus-tinker-edge-t = "Linux Kernel provided and supported by ASUS for ASUS Tinker Edge T"
