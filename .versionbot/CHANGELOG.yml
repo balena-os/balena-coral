@@ -1,4 +1,188 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 4f3072e342756e45ed206dc659f125b3ab000a59
+      hash: 4e58522df22283a45d2a823f6304cabc53e13a15
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 4f3072e342756e45ed206dc659f125b3ab000a59
+        changelog-entry: Update balena-yocto-scripts to 4f3072e342756e45ed206dc659f125b3ab000a59
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/leviathan digest to 8fb47f2
+              hash: 0bdd362c660078414259a167e492f1e91f3ea70e
+              body: |
+                Update balena-os/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.37
+          title: ""
+          date: 2024-09-05T23:21:25.987Z
+        - commits:
+            - subject: Update balena-os/leviathan digest to 5db2b5d
+              hash: 3ea0421883a4c50185c8fa4f66de9f4e74f12a0b
+              body: |
+                Update balena-os/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.36
+          title: ""
+          date: 2024-09-05T16:03:09.417Z
+        - commits:
+            - subject: Update balena-os/leviathan digest to da52396
+              hash: 807851bdb98648080dfd8565e3de047f92323454
+              body: |
+                Update balena-os/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.35
+          title: ""
+          date: 2024-09-04T09:07:04.754Z
+        - commits:
+            - subject: Update actions/create-github-app-token action to v1.10.4
+              hash: e6a68531b03ca9d6b477fa85c9ec43990edd1a7a
+              body: |
+                Update actions/create-github-app-token from 1.10.3 to 1.10.4
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.34
+          title: ""
+          date: 2024-09-04T06:38:29.340Z
+        - commits:
+            - subject: Update balena-os/leviathan digest to d8572e2
+              hash: 32066fde42690d51da3609f028cb68a2e3c7be2c
+              body: |
+                Update balena-os/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.33
+          title: ""
+          date: 2024-09-02T19:01:22.932Z
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: ef09edfd0b30062bbf0744e9fa2694a1326544ed
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.32
+          title: ""
+          date: 2024-09-02T01:59:38.392Z
+        - commits:
+            - subject: Update actions/upload-artifact action to v4.4.0
+              hash: 50fe40fee6dde2abd580606a60e5a613959e2d3e
+              body: |
+                Update actions/upload-artifact from 4.3.6 to 4.4.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.31
+          title: ""
+          date: 2024-09-01T04:28:48.680Z
+        - commits:
+            - subject: Update balena-os/leviathan digest to ff6a079
+              hash: 3eff42640327916a3ea7acb35eb1b5c4905303e8
+              body: |
+                Update balena-os/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.30
+          title: ""
+          date: 2024-09-01T02:30:52.700Z
+        - commits:
+            - subject: Restrict runners via yocto label, not 16cpu
+              hash: 5ec368545ccc173631b7b82f68f7619b1dbfe5e5
+              body: >
+                We currently have many `8cpu` runners available that are
+
+                migrating from Jenkins that we should allow to use for yocto
+                builds.
+
+
+                As long as some runners don't have the `yocto` tag so we don't
+                bottleneck the runner queue for other orgs.
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.25.29
+          title: ""
+          date: 2024-08-31T23:20:44.235Z
+        - commits:
+            - subject: checkout private contracts for test job
+              hash: d49882c54127d8b805191ff313a3a00d1c163590
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.25.28
+          title: ""
+          date: 2024-08-30T14:24:42.877Z
+        - commits:
+            - subject: use apt-get to install s4cmd instead of pip
+              hash: 938730ae60d60574f9abf757c1c4efcc4e526a2f
+              body: >
+                using pip to install python packages also installable by debian
+                is not recommended, and leads to errors while trying to do so.
+                Switch to using apt-get to install s4cmd to address this
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.25.27
+          title: ""
+          date: 2024-08-29T13:53:51.392Z
+        - commits:
+            - subject: Fix if condition for checking merge commit test results
+              hash: c7b37652661b12832a2a40a39e4548632478b8ef
+              body: >
+                The logic for this step was broken - even when no test matrix
+                was provided, it was chekcing for test results, which we don't
+                want (as they won't exist)
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.25.26
+          title: ""
+          date: 2024-08-27T16:58:34.259Z
+  version: 6.0.21+rev3
+  title: ""
+  date: 2024-09-07T15:41:01.519Z
+- commits:
     - subject: Fix kernel and u-boot for coral-dev on kirkstone
       hash: 3a96b7e43f80ac061ffe187a002dc498854be129
       body: >
