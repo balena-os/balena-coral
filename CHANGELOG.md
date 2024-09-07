@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.21+rev2
+## (2024-09-07)
+
+* Fix kernel and u-boot for coral-dev on kirkstone [Florin Sarbu]
+
 # v6.0.21+rev1
 ## (2024-09-06)
 

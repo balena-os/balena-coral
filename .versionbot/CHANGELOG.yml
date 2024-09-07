@@ -1,4 +1,24 @@
 - commits:
+    - subject: Fix kernel and u-boot for coral-dev on kirkstone
+      hash: 3a96b7e43f80ac061ffe187a002dc498854be129
+      body: >
+        Also add linux-imx.inc from
+
+        https://github.com/Freescale/meta-freescale/commit/2ee3f2a9f254adab6a6d42a6e3085d05fbc8ac07
+
+        because it's the one that was used when linux-imx_4.14.98.bb was
+        originally added to this repo.
+      footer:
+        Changelog-entry: Fix kernel and u-boot for coral-dev on kirkstone
+        changelog-entry: Fix kernel and u-boot for coral-dev on kirkstone
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.0.21+rev2
+  title: ""
+  date: 2024-09-07T14:35:06.586Z
+- commits:
     - subject: Update contracts to 59752b7f99c1e5576c605a2f4188f9661468319f
       hash: ef3c1a10bd0b699b992195f8e8840a9cc8dcf196
       body: Update contracts
