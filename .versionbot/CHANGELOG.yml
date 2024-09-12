@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update layers/meta-openembedded to
+        9a24b7679810628b594cc5a9b52f77f53d37004f
+      hash: 47a2dbe46a1ab1aab6a6b808b0ac520c58af6aff
+      body: Update layers/meta-openembedded
+      footer:
+        Changelog-entry: Update layers/meta-openembedded to
+          9a24b7679810628b594cc5a9b52f77f53d37004f
+        changelog-entry: Update layers/meta-openembedded to
+          9a24b7679810628b594cc5a9b52f77f53d37004f
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.0.22+rev2
+  title: ""
+  date: 2024-09-12T09:44:00.498Z
+- commits:
     - subject: Update .gitmodules with submodule branch information
       hash: dba53faa92f8665a089244aac53bcbf366979f64
       body: ""
