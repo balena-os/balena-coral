@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update .gitmodules with submodule branch information
+      hash: dba53faa92f8665a089244aac53bcbf366979f64
+      body: ""
+      footer:
+        Changelog-entry: Update .gitmodules with submodule branch information
+        changelog-entry: Update .gitmodules with submodule branch information
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.0.22+rev1
+  title: ""
+  date: 2024-09-12T07:43:45.310Z
+- commits:
     - subject: Update layers/meta-balena to c210599ad8e55675a29fe24800b7046eb260f397
       hash: b660ebd6cc8c40aaebe829c38d0baa42a75a7780
       body: Update layers/meta-balena

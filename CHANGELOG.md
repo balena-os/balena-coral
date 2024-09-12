@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.22+rev1
+## (2024-09-12)
+
+* Update .gitmodules with submodule branch information [Florin Sarbu]
+
 # v6.0.22
 ## (2024-09-12)
 
