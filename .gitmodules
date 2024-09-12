@@ -5,19 +5,19 @@
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky
-	branch = warrior
+	branch = kirkstone
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-	branch = warrior
+	branch = kirkstone
 [submodule "layers/meta-freescale"]
 	path = layers/meta-freescale
 	url = https://github.com/Freescale/meta-freescale.git
-	branch = warrior
+	branch = kirkstone
 [submodule "layers/meta-coral"]
 	path = layers/meta-coral
 	url = https://github.com/mirzak/meta-coral.git
-	branch = warrior
+	branch = master
 [submodule "layers/meta-balena"]
 	path = layers/meta-balena
 	url = https://github.com/balena-os/meta-balena.git
