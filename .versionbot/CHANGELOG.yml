@@ -1,4 +1,37 @@
 - commits:
+    - subject: Update layers/meta-balena to 99684cda8ebe27dc5c5882ebc410b525d606b632
+      hash: 0a0c619d6aeb6ac766b11f2b10c520892f58cd2f
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 99684cda8ebe27dc5c5882ebc410b525d606b632
+        changelog-entry: Update layers/meta-balena to 99684cda8ebe27dc5c5882ebc410b525d606b632
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "common: fix return in commit_apply-dbx HUP hook"
+              hash: a557b614a0ce2cf39d6bdfb3e464834b0d570895
+              body: >
+                This code was moved from rollback-health into a hostapp-update
+                commit
+
+                hook, where it now runs outside of a function.
+
+
+                Replace the invalid return statements with exits.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-6.0.24
+          title: ""
+          date: 2024-09-13T08:22:06.217Z
+  version: 6.0.24
+  title: ""
+  date: 2024-09-13T12:48:21.807Z
+- commits:
     - subject: Update balena-yocto-scripts to 0684ef25f676baddd6c55a504b575776269588de
       hash: 473aa84ecf2080aa18cad5512b880fbe833f76e6
       body: Update balena-yocto-scripts
