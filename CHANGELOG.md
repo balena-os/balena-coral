@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.29
+## (2024-09-18)
+
+
+<details>
+<summary> Update layers/meta-balena to c702e9376d4424d8df32dff465a4e17ebdf009a9 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.29
+> ### (2024-09-18)
+> 
+> * modemmanager: Fix SIM7100E crash [Florin Sarbu]
+> 
+
+</details>
+
 # v6.0.28+rev1
 ## (2024-09-18)
 
