@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.0.31
+## (2024-09-21)
+
+
+<details>
+<summary> Update layers/meta-balena to b3ab5311c0ad999dc896ab5b9a85e48098ddd3dc [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.31
+> ### (2024-09-20)
+> 
+> * mkfs-hostapp-native: update Dockerfile to using trixie [Alex Gonzalez]
+> * meta-balena-rust: rust-llvm: backport a fix for build with gcc-13 [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.0.30+rev1
 ## (2024-09-20)
 
