@@ -60,3 +60,6 @@ CONF_VERSION = "2"
 HOSTTOOLS += "docker iptables"
 
 ACCEPT_FSL_EULA = "1"
+
+# CycloneDX SBOM and VEX generation
+INHERIT += "cyclonedx-export"
